@@ -1,5 +1,3 @@
-# Hub
-Boutique Travel planner. A curated journey for you and yours.
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +5,7 @@ Boutique Travel planner. A curated journey for you and yours.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Conscious Compass | Custom Travel Curation & Intelligence</title>
     <!-- Google Fonts: Editorial Serif and clean sans-serif UI -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -59,17 +57,26 @@ Boutique Travel planner. A curated journey for you and yours.
     <!-- Hero / Cinematic Cover Photo Section -->
     <div class="w-full h-48 md:h-64 relative overflow-hidden bg-brand-forest">
         <!-- Background image with local fallback -->
-        <img src="landscape.jpg" 
-             onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80'" 
+        <img src="watermarked_img_7924346275115866342.png" 
+             onerror="if(this.src !== 'landscape.jpg') { this.src='landscape.jpg'; } else { this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80'; }" 
              alt="Bespoke Travel Landscape" 
-             class="w-full h-full object-cover opacity-80 mix-blend-multiply transition-all-300">
+             class="w-full h-full object-cover object-[85%_35%] opacity-85 mix-blend-multiply transition-all-300">
         <div class="absolute inset-0 bg-gradient-to-t from-brand-linen/40 via-transparent to-transparent"></div>
     </div>
 
     <!-- Header / Profile Segment -->
     <header class="w-full max-w-2xl mx-auto px-6 -mt-16 md:-mt-24 relative z-10 text-center pb-6">
-        <div class="relative w-28 h-28 md:w-36 md:h-36 mx-auto mb-4 rounded-full overflow-hidden border-4 border-brand-linen bg-white shadow-md">
-            <!-- Portrait picture with initials fallback -->
+        
+        <!-- Brand Logo Element (Direct preview with fallback to logo.png) -->
+        <div class="mb-4">
+            <img src="watermarked_img_3889473375094596196.png" 
+                 onerror="if(this.src !== 'logo.png') { this.src='logo.png'; } else { this.style.display='none'; }" 
+                 alt="The Conscious Compass Logo" 
+                 class="max-h-36 md:max-h-44 mx-auto object-contain drop-shadow-md transition-all-300">
+        </div>
+
+        <!-- Portrait picture with initials fallback -->
+        <div class="relative w-28 h-28 md:w-32 md:h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-brand-linen bg-white shadow-md">
             <img src="portrait.jpg" 
                  onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';" 
                  alt="Holly E. Meinert" 
@@ -78,6 +85,7 @@ Boutique Travel planner. A curated journey for you and yours.
                 CC
             </div>
         </div>
+
         <h1 class="font-serif text-3xl md:text-4xl font-bold tracking-wide text-brand-forest mb-1">The Conscious Compass</h1>
         <p class="font-serif italic text-brand-sage text-md md:text-lg mb-3">Bespoke Travel Design & Curation</p>
         <p class="max-w-md mx-auto text-sm text-brand-charcoal/90 leading-relaxed font-light">
@@ -160,7 +168,7 @@ Boutique Travel planner. A curated journey for you and yours.
                         </div>
                         <div>
                             <h4 class="text-sm font-semibold text-brand-forest">Artistic Portfolios & Fine Art Prints</h4>
-                            <p class="text-xs text-brand-charcoal/60 font-light">View curation frames, design philosophy, and shop logs</p>
+                            <p class="text-xs text-brand-charcoal/60 font-light">View curation frames, design philosophy, and shop prints</p>
                         </div>
                     </div>
                     <svg class="w-4 h-4 text-brand-sage group-hover:text-brand-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
@@ -545,7 +553,7 @@ Boutique Travel planner. A curated journey for you and yours.
                 </p>
                 
                 <p class="text-sm font-light text-brand-charcoal/90 leading-relaxed">
-                    My career has been defined by the art of <strong class="text-brand-forest">curation</strong>. As a multidisciplinary artist and educator, I have spent years exploring the intersection of visual storytelling, global connectivity, and geographic navigation. In the art world, curation is about selecting, organizing, and presenting elements to tell a profound, cohesive story. In high-end travel design, I apply that exact same artistic lens. I do not just book trips; I <strong class="text-brand-forest">curate</strong> immersive, sensory, and highly intentional environments for you to experience.
+                    My career has been defined by the art of <strong class="text-brand-forest">curation</strong>. As a landscape painter and educator, I have spent years exploring the intersection of visual storytelling, global connectivity, and geographic navigation. In the fine art world, canvas curation is about selecting, organizing, and presenting elements to tell a profound, cohesive story. In high-end travel design, I apply that exact same artistic lens. I do not just book trips; I <strong class="text-brand-forest">curate</strong> immersive, sensory, and highly intentional environments for you to experience.
                 </p>
                 
                 <p class="text-sm font-light text-brand-charcoal/90 leading-relaxed">
@@ -565,56 +573,55 @@ Boutique Travel planner. A curated journey for you and yours.
             <!-- Stylized Portfolio / Travel Art print directory -->
             <div class="space-y-4">
                 <div class="text-center">
-                    <h4 class="font-serif text-lg font-bold text-brand-forest">Fine Art Prints & Landscape Logs</h4>
-                    <p class="text-xs text-brand-charcoal/60 font-light">Select portfolios captured on-site. Click any piece to acquire a fine art print.</p>
+                    <h4 class="font-serif text-lg font-bold text-brand-forest">Original Fine Art Prints & Canvas Logs</h4>
+                    <p class="text-xs text-brand-charcoal/60 font-light">Original canvases captured live on-location. Click any piece to acquire a fine art print.</p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-4">
-                    <!-- Photo Card 1 -->
+                    <!-- Painting Card 1 -->
                     <a href="https://your-print-shop-link.com" target="_blank" class="group block relative rounded-xl overflow-hidden shadow-sm aspect-video bg-brand-forest">
-                        <!-- Image with fallback -->
                         <img src="gallery1.jpg" 
                              onerror="this.src='https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=400&q=85'" 
-                             alt="Cloud Canopies" 
+                             alt="Cloud Canopies Painting" 
                              class="w-full h-full object-cover transition-all-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-brand-forestLight/30 group-hover:bg-brand-forestLight/60 transition-all-300 flex flex-col justify-end p-3">
-                            <span class="text-white font-serif italic text-xs block truncate mb-1">I. Cloud Canopies</span>
+                            <span class="text-white font-serif italic text-xs block truncate mb-1">I. Cloud Canopies (Oil on Canvas)</span>
                             <span class="text-[9px] text-brand-accent uppercase tracking-widest font-semibold bg-brand-forest/80 px-2 py-0.5 rounded self-start opacity-0 group-hover:opacity-100 transition-all-300">Purchase Fine Art Print ↗</span>
                         </div>
                     </a>
                     
-                    <!-- Photo Card 2 -->
+                    <!-- Painting Card 2 -->
                     <a href="https://your-print-shop-link.com" target="_blank" class="group block relative rounded-xl overflow-hidden shadow-sm aspect-video bg-brand-sage">
                         <img src="gallery2.jpg" 
                              onerror="this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=400&q=85'" 
-                             alt="Mountain Corridors" 
+                             alt="Mountain Corridors Watercolor" 
                              class="w-full h-full object-cover transition-all-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-brand-forest/30 group-hover:bg-brand-forest/60 transition-all-300 flex flex-col justify-end p-3">
-                            <span class="text-white font-serif italic text-xs block truncate mb-1">II. Mountain Corridors</span>
+                            <span class="text-white font-serif italic text-xs block truncate mb-1">II. Mountain Corridors (Watercolor)</span>
                             <span class="text-[9px] text-brand-accent uppercase tracking-widest font-semibold bg-brand-forest/80 px-2 py-0.5 rounded self-start opacity-0 group-hover:opacity-100 transition-all-300">Purchase Fine Art Print ↗</span>
                         </div>
                     </a>
 
-                    <!-- Photo Card 3 -->
+                    <!-- Painting Card 3 -->
                     <a href="https://your-print-shop-link.com" target="_blank" class="group block relative rounded-xl overflow-hidden shadow-sm aspect-video bg-brand-charcoal">
                         <img src="gallery3.jpg" 
                              onerror="this.src='https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=400&q=85'" 
-                             alt="Artisan Guilds" 
+                             alt="Artisan Guilds Painting" 
                              class="w-full h-full object-cover transition-all-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-brand-forestLight/30 group-hover:bg-brand-forestLight/60 transition-all-300 flex flex-col justify-end p-3">
-                            <span class="text-white font-serif italic text-xs block truncate mb-1">III. Artisan Guilds</span>
+                            <span class="text-white font-serif italic text-xs block truncate mb-1">III. Artisan Guilds (Mixed Media)</span>
                             <span class="text-[9px] text-brand-accent uppercase tracking-widest font-semibold bg-brand-forest/80 px-2 py-0.5 rounded self-start opacity-0 group-hover:opacity-100 transition-all-300">Purchase Fine Art Print ↗</span>
                         </div>
                     </a>
 
-                    <!-- Photo Card 4 -->
+                    <!-- Painting Card 4 -->
                     <a href="https://your-print-shop-link.com" target="_blank" class="group block relative rounded-xl overflow-hidden shadow-sm aspect-video bg-brand-accent">
                         <img src="gallery4.jpg" 
                              onerror="this.src='https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=400&q=85'" 
-                             alt="Coastal Horizons" 
+                             alt="Coastal Horizons Oil" 
                              class="w-full h-full object-cover transition-all-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-brand-forest/20 group-hover:bg-brand-forest/50 transition-all-300 flex flex-col justify-end p-3">
-                            <span class="text-brand-forest font-serif italic text-xs block truncate mb-1">IV. Coastal Horizons</span>
+                            <span class="text-brand-forest font-serif italic text-xs block truncate mb-1">IV. Coastal Horizons (Oil on Board)</span>
                             <span class="text-[9px] text-brand-forest uppercase tracking-widest font-semibold bg-brand-linenDark px-2 py-0.5 rounded self-start opacity-0 group-hover:opacity-100 transition-all-300">Purchase Fine Art Print ↗</span>
                         </div>
                     </a>
@@ -1016,7 +1023,7 @@ Boutique Travel planner. A curated journey for you and yours.
             document.getElementById('selectedTier').value = tierValue;
         }
 
-        // Form Submit Actions
+        // Form Submit Actions via Web3Forms API Connection
         function handleFormSubmission(event) {
             event.preventDefault();
             
@@ -1029,7 +1036,81 @@ Boutique Travel planner. A curated journey for you and yours.
                 showFormError('You must acknowledge the Retainer & Timeline parameters before submitting.');
                 return;
             }
-function resetDiscoveryForm() {
+
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+
+            // Gather data
+            const payload = {
+                // REPLACE THIS STRING WITH YOUR REAL ACCESS KEY GRABBED FROM WEB3FORMS.COM
+                access_key: "YOUR_ACCESS_KEY_HERE", 
+                name: document.getElementById('clientName').value,
+                email: document.getElementById('clientEmail').value,
+                phone: document.getElementById('clientPhone').value,
+                party_type: document.getElementById('partyType').value,
+                children_ages: document.getElementById('childrenAges').value,
+                selected_tier: document.getElementById('selectedTier').value,
+                destination: document.getElementById('destination').value,
+                travel_dates: document.getElementById('travelDates').value,
+                vibe_focus: Array.from(document.querySelectorAll('input[name="vibeFocus"]:checked')).map(el => el.value).join(', '),
+                agility_profile: document.querySelector('input[name="agilityProfile"]:checked')?.value || 'N/A',
+                culinary_style: document.querySelector('input[name="culinaryStyle"]:checked')?.value || 'N/A',
+                comfort_zone: document.querySelector('input[name="comfortZone"]:checked')?.value || 'N/A',
+                final_thoughts: document.getElementById('finalThoughts').value
+            };
+
+            // If tier specific fields exist, compile them
+            const selectedTier = payload.selected_tier;
+            if (selectedTier === 'tier1') {
+                payload.tier1_friction = Array.from(document.querySelectorAll('input[name="tier1Friction"]:checked')).map(el => el.value).join(', ');
+                payload.tier1_anxieties = document.getElementById('tier1Anxieties')?.value || '';
+            } else if (selectedTier === 'tier2') {
+                payload.tier2_days = document.getElementById('tier2Days')?.value || '';
+                payload.tier2_description = document.getElementById('tier2Description')?.value || '';
+                payload.tier2_bookings = document.getElementById('tier2Bookings')?.value || '';
+                payload.tier2_dietary = document.getElementById('tier2Dietary')?.value || '';
+            } else if (selectedTier === 'tier3') {
+                payload.tier3_budget = document.getElementById('tier3Budget')?.value || '';
+                payload.tier3_pacing = document.getElementById('tier3Pacing')?.value || '';
+                payload.tier3_dietary = Array.from(document.querySelectorAll('input[name="tier3Dietary"]:checked')).map(el => el.value).join(', ');
+                payload.tier3_allergies_specify = document.getElementById('tier3AllergiesSpecify')?.value || '';
+                payload.tier3_accommodation_impact = document.querySelector('input[name="tier3AccommodationImpact"]:checked')?.value || '';
+                payload.tier3_dealbreakers = document.getElementById('tier3Dealbreakers')?.value || '';
+            }
+
+            // Post directly to Web3Forms API in background
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    // Show Custom Success portal
+                    document.getElementById('success-portal').classList.remove('hidden');
+                } else {
+                    console.log(response);
+                    showFormError(json.message || "Form submission failed. Please check your Web3Forms Access Key.");
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                showFormError("Server connection error. Please verify your internet connection and try again.");
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        }
+
+        // Form Reset Actions
+        function resetDiscoveryForm() {
             // Reset state
             document.getElementById('discoveryForm').reset();
             currentStep = 1;
@@ -1043,8 +1124,3 @@ function resetDiscoveryForm() {
     </script>
 </body>
 </html>
-            // Show Custom Success portal
-            document.getElementById('success-portal').classList.remove('hidden');
-        }
-
-        // Form Reset Actions
