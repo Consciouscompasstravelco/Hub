@@ -5,7 +5,7 @@
     <title>The Conscious Compass Travel Co.</title>
     <!-- Tailwind CSS for modern, responsive layout styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -16,9 +16,113 @@
         h1, h2, h3, h4, .serif {
             font-family: 'Playfair Display', serif;
         }
+        /* Custom smooth transition support for the editorial accordion */
+        .faq-content {
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        }
+
+        /* --- WATERCOLOR FLUTTERING hummINGBIRD ANIMATIONS --- */
+        /* Gentle, organic floating bobbing */
+        @keyframes floatBob {
+            0%, 100% {
+                transform: translateY(0) rotate(2deg);
+            }
+            50% {
+                transform: translateY(-12px) rotate(-3deg);
+            }
+        }
+        /* High-speed hummingbird wing flap */
+        @keyframes wingFlapLeft {
+            0%, 100% {
+                transform: rotateY(0deg) skewY(0deg) scaleX(1);
+            }
+            50% {
+                transform: rotateY(75deg) skewY(-10deg) scaleX(0.3);
+            }
+        }
+        @keyframes wingFlapRight {
+            0%, 100% {
+                transform: rotateY(0deg) skewY(0deg) scaleX(1);
+            }
+            50% {
+                transform: rotateY(-75deg) skewY(10deg) scaleX(0.3);
+            }
+        }
+
+        /* Flutter container classes */
+        .bird-container {
+            animation: floatBob 4s ease-in-out infinite;
+            transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), top 0.4s ease, left 0.4s ease;
+            filter: drop-shadow(0 4px 12px rgba(61, 64, 53, 0.15));
+        }
+        .wing-left-anim {
+            transform-origin: 32px 35px;
+            animation: wingFlapLeft 0.12s linear infinite;
+        }
+        .wing-right-anim {
+            transform-origin: 48px 37px;
+            animation: wingFlapRight 0.12s linear infinite;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-stone-200">
+
+    <!-- SVG Watercolor Turbulence Filter (Simulates natural paper bleeds) -->
+    <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+        <filter id="watercolor-bleed">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <!-- FLOATING WATERCOLOR HUMMINGBIRD CHARACTER -->
+    <div id="hummingbird" class="bird-container fixed top-32 right-4 md:right-12 z-50 w-20 h-20 md:w-28 md:h-20 pointer-events-auto cursor-pointer select-none">
+        <svg viewBox="0 0 100 100" class="w-full h-full">
+            <defs>
+                <!-- Iridescent South American feather gradients -->
+                <linearGradient id="beakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1B1C1D" />
+                    <stop offset="100%" stop-color="#3D4035" />
+                </linearGradient>
+                <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#146C2E" stop-opacity="0.85" />
+                    <stop offset="45%" stop-color="#00838F" stop-opacity="0.8" />
+                    <stop offset="100%" stop-color="#4A148C" stop-opacity="0.75" />
+                </linearGradient>
+                <linearGradient id="wingLeftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00838F" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#8C7A6B" stop-opacity="0.6" />
+                </linearGradient>
+                <linearGradient id="wingRightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2E7D32" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#8C7A6B" stop-opacity="0.6" />
+                </linearGradient>
+                <linearGradient id="tailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4A148C" stop-opacity="0.8" />
+                    <stop offset="100%" stop-color="#146C2E" stop-opacity="0.7" />
+                </linearGradient>
+            </defs>
+
+            <!-- Long, delicate needle beak -->
+            <path d="M 32 35 L 2 28" stroke="url(#beakGrad)" stroke-width="2" stroke-linecap="round" />
+
+            <!-- Soft watercolor tail feathers -->
+            <path d="M 68 45 C 80 62, 85 75, 82 82 C 78 82, 72 70, 60 52 Z" fill="url(#tailGrad)" filter="url(#watercolor-bleed)" />
+            <path d="M 65 48 C 76 65, 78 78, 76 80 C 72 80, 68 70, 58 53 Z" fill="url(#tailGrad)" filter="url(#watercolor-bleed)" opacity="0.8" />
+
+            <!-- Main textured watercolor body -->
+            <path d="M 30 35 C 45 32, 58 38, 65 48 C 58 55, 48 58, 38 52 C 28 46, 25 38, 30 35 Z" fill="url(#bodyGrad)" filter="url(#watercolor-bleed)" />
+
+            <!-- Fluttering layered wings -->
+            <!-- Left Wing (Behind) -->
+            <path class="wing-left-anim" d="M 32 35 C 25 15, 42 2, 48 5 C 50 12, 42 28, 32 35 Z" fill="url(#wingLeftGrad)" filter="url(#watercolor-bleed)" />
+            <!-- Right Wing (Front) -->
+            <path class="wing-right-anim" d="M 48 37 C 58 15, 75 5, 80 10 C 78 20, 62 30, 48 37 Z" fill="url(#wingRightGrad)" filter="url(#watercolor-bleed)" />
+
+            <!-- Delicate watercolor eye drop -->
+            <circle cx="34" cy="33" r="1.5" fill="#2C302E" opacity="0.9" />
+        </svg>
+    </div>
 
     <!-- Elegant Text Branding -->
     <header class="py-10 px-4 text-center max-w-4xl mx-auto">
@@ -49,30 +153,47 @@
         </div>
 
         <!-- Section 1: Expandable "Meet Your Travel Architect" Intro -->
-        <section class="max-w-2xl mx-auto mb-16 text-center bg-white/40 border border-stone-200/40 rounded-3xl p-6 md:p-8 shadow-sm">
+        <section class="max-w-4xl mx-auto mb-16 text-center bg-white/40 border border-stone-200/40 rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300">
             <span class="text-xs tracking-[0.2em] text-[#8C7A6B] uppercase font-bold">The Curator</span>
             <h2 class="text-3xl font-medium text-[#3D4035] mt-2 mb-6">Meet Your Travel Architect</h2>
             
-            <div class="text-stone-600 leading-relaxed text-sm md:text-base text-left max-w-xl mx-auto space-y-5">
+            <div class="text-stone-600 leading-relaxed text-sm md:text-base text-left">
                 <!-- Hook Paragraph: Always Visible -->
-                <p class="font-medium text-[#4E5142] italic text-center text-base md:text-lg mb-6 leading-relaxed">
+                <p class="font-medium text-[#4E5142] italic text-center text-base md:text-lg mb-6 leading-relaxed max-w-2xl mx-auto">
                     An exceptional travel experience is born from the tension between raw adventure and meticulous design. It requires a planner who looks past generic, glossy brochures and instead understands how to read a landscape, decode unpredictable infrastructure, and engage intentionally with local community networks.
                 </p>
                 
-                <!-- Expandable Deep-Dive Panel -->
-                <div id="about-extended" class="hidden space-y-5 border-t border-stone-200/60 pt-5 transition-all duration-300">
-                    <p>
-                        My career has been defined by the art of <strong class="text-[#3D4035] font-semibold">curation</strong>. As a multidisciplinary artist and educator, I have spent years exploring the intersection of visual storytelling, global connectivity, and geographic navigation. In the art world, curation is about selecting, organizing, and presenting elements to tell a profound, cohesive story. In high-end travel design, I apply that exact same artistic lens. I do not just book trips; I curate immersive, sensory, and highly intentional environments for you to experience.
-                    </p>
-                    <p>
-                        My design philosophy is built from firsthand, real-world experience navigating diverse international terrains—from the dense canopy systems of Central America to complex, transit-heavy urban landscapes. Having mapped out and executed deep-dive family travels and eco-conscious expeditions across the globe, I launched <strong class="text-[#3D4035] font-semibold">The Conscious Compass Travel Co.</strong> to provide travelers with an entirely new standard of travel intelligence.
-                    </p>
-                    <p>
-                        I specialize in translating complex international logistics, regional transit systems, and intricate cultural topographies into a singular, beautifully curated blueprint. My focus is entirely on slow, sustainable, and eco-conscious travel—crafting journeys that honor the ecosystems we visit while protecting the absolute safety, structural comfort, and culinary needs of your travel party. I don't just tell you where to go; I give you the complete spatial awareness, transit protocols, and expertly curated neighborhood insights you need to experience a destination with complete, unwavering confidence.
-                    </p>
-                    <p class="font-medium text-[#4E5142] italic text-center pt-3 text-base">
-                        Let’s step away from the endless planning loops and curate your next masterpiece.
-                    </p>
+                <!-- Expandable Deep-Dive Panel (Horizontal Split-Grid) -->
+                <div id="about-extended" class="hidden border-t border-stone-200/60 pt-6 transition-all duration-300">
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <!-- Left Column: Biography Narrative -->
+                        <div class="md:w-3/5 space-y-5 text-sm md:text-base text-stone-600 leading-relaxed">
+                            <p>
+                                My career has been defined by the art of <strong class="text-[#3D4035] font-semibold">curation</strong>. As a multidisciplinary artist and educator, I have spent years exploring the intersection of visual storytelling, global connectivity, and geographic navigation. In the art world, curation is about selecting, organizing, and presenting elements to tell a profound, cohesive story. In high-end travel design, I apply that exact same artistic lens. I do not just book trips; I curate immersive, sensory, and highly intentional environments for you to experience.
+                            </p>
+                            <p>
+                                My design philosophy is built from firsthand, real-world experience navigating diverse international terrains—from the dense canopy systems of Central America to complex, transit-heavy urban landscapes. Having mapped out and executed deep-dive family travels and eco-conscious expeditions across the globe, I launched <strong class="text-[#3D4035] font-semibold">The Conscious Compass Travel Co.</strong> to provide travelers with an entirely new standard of travel intelligence.
+                            </p>
+                            <p>
+                                I specialize in translating complex international logistics, regional transit systems, and intricate cultural topographies into a singular, beautifully curated blueprint. My focus is entirely on slow, sustainable, and eco-conscious travel—crafting journeys that honor the ecosystems we visit while protecting the absolute safety, structural comfort, and culinary needs of your travel party. I don't just tell you where to go; I give you the complete spatial awareness, transit protocols, and expertly curated neighborhood insights you need to experience a destination with complete, unwavering confidence.
+                            </p>
+                            <p class="font-medium text-[#4E5142] italic pt-3 text-base text-center md:text-left">
+                                Let’s step away from the endless planning loops and curate your next masterpiece.
+                            </p>
+                        </div>
+                        
+                        <!-- Right Column: Portrait and Stationery Logo Stacking Grid -->
+                        <div class="md:w-2/5 w-full flex flex-col gap-5 shrink-0">
+                            <!-- Portrait Frame -->
+                            <div class="rounded-2xl overflow-hidden border border-stone-200/60 shadow-sm aspect-square bg-stone-100">
+                                <img src="IMG_0608.jpeg" alt="Travel Architect Portrait" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Logo Frame -->
+                            <div class="rounded-2xl overflow-hidden border border-stone-200/60 shadow-sm bg-white p-2">
+                                <img src="The conscious compass travel co.Culture background logo.jpg" alt="The Conscious Compass Logo" class="w-full h-auto rounded-xl">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Interactive Toggle Button -->
@@ -100,6 +221,7 @@
             <div class="space-y-6">
                 <!-- Tier 1 -->
                 <div class="bg-white p-6 md:p-8 border border-stone-200/60 rounded-3xl flex flex-col md:flex-row gap-6 md:gap-8 shadow-sm hover:shadow-md transition items-stretch">
+                    <!-- Left Column Anchor -->
                     <div class="md:w-1/4 flex flex-col justify-between border-b md:border-b-0 md:border-r border-stone-200/40 pb-5 md:pb-0 md:pr-6 min-w-[200px]">
                         <div>
                             <span class="text-xs font-bold tracking-wider text-[#8C7A6B] uppercase">Tier 1</span>
@@ -110,6 +232,7 @@
                             Select Blueprint ➔
                         </a>
                     </div>
+                    <!-- Right Column Content -->
                     <div class="md:w-3/4 flex flex-col justify-center space-y-4 text-xs md:text-sm text-stone-600">
                         <p class="italic text-stone-700"><strong class="text-stone-800 font-semibold">Perfect For:</strong> The confident DIY traveler or anxious planner who loves booking their own trips but wants an expert to eliminate the stress of logistics, safety, or complex international entry requirements.</p>
                         <p><strong class="text-stone-800 font-semibold">What You Receive:</strong> A highly organized, comprehensive custom PDF document focusing entirely on what is keeping you up at night.</p>
@@ -128,6 +251,7 @@
 
                 <!-- Tier 2 -->
                 <div class="bg-white p-6 md:p-8 border border-stone-200/60 rounded-3xl flex flex-col md:flex-row gap-6 md:gap-8 shadow-sm hover:shadow-md transition items-stretch">
+                    <!-- Left Column Anchor -->
                     <div class="md:w-1/4 flex flex-col justify-between border-b md:border-b-0 md:border-r border-stone-200/40 pb-5 md:pb-0 md:pr-6 min-w-[200px]">
                         <div>
                             <span class="text-xs font-bold tracking-wider text-[#8C7A6B] uppercase">Tier 2</span>
@@ -139,6 +263,7 @@
                             Select Day-Hacker ➔
                         </a>
                     </div>
+                    <!-- Right Column Content -->
                     <div class="md:w-3/4 flex flex-col justify-center space-y-4 text-xs md:text-sm text-stone-600">
                         <p class="italic text-stone-700"><strong class="text-stone-800 font-semibold">Perfect For:</strong> Travelers who have 70% of their trip figured out but are completely stuck on how to maximize a specific multi-day stretch, handle a complex transit day, or curate a flawless hidden-gem experience.</p>
                         <p><strong class="text-stone-800 font-semibold">What You Receive:</strong> Seamless, hourly time-blocked execution blueprints for the specific dates requested, designed to plug directly into your existing calendar.</p>
@@ -159,6 +284,7 @@
                     <div class="absolute top-0 right-0 bg-[#8C7A6B] text-white text-[9px] tracking-wider uppercase py-1 px-4 rounded-bl-xl font-bold shadow-xs">
                         Flagship Service
                     </div>
+                    <!-- Left Column Anchor -->
                     <div class="md:w-1/4 flex flex-col justify-between border-b md:border-b-0 md:border-r border-stone-300 pb-5 md:pb-0 md:pr-6 min-w-[200px]">
                         <div>
                             <span class="text-xs font-bold tracking-wider text-[#8C7A6B] uppercase block mt-2">Tier 3</span>
@@ -174,6 +300,7 @@
                             Retain Architect ➔
                         </a>
                     </div>
+                    <!-- Right Column Content -->
                     <div class="md:w-3/4 flex flex-col justify-center space-y-4 text-xs md:text-sm text-stone-600">
                         <p class="italic text-stone-700"><strong class="text-stone-800 font-semibold">Perfect For:</strong> The busy traveler who wants a flawless, deeply intentional international vacation from start to finish without spending 40 hours staring at travel forums and cross-referencing maps.</p>
                         <p><strong class="text-stone-800 font-semibold">What You Receive:</strong> A complete, beautifully mapped, comprehensive end-to-end travel blueprint.</p>
@@ -267,97 +394,161 @@
 
         <hr class="border-stone-200/60 my-16">
 
-        <!-- Section 4: Interactive Strategic FAQs -->
+        <!-- Section 4: Reimagined Editorial FAQ Directory (Completely borderless, stylized, and animated) -->
         <section class="mb-20 max-w-2xl mx-auto">
             <div class="text-center mb-12">
                 <span class="text-xs tracking-[0.2em] text-[#8C7A6B] uppercase font-bold">Clarifying the Path</span>
                 <h2 class="text-3xl md:text-4xl font-medium text-[#3D4035] mt-2">Frequently Asked Questions</h2>
             </div>
 
-            <div class="space-y-4">
-                <!-- NEW FAQ Item 1 (Reimagined from 'How It Works') -->
-                <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
-                    <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(1)">
-                        <span>How does this process work from start to finish?</span>
-                        <svg id="icon-1" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+            <!-- Accordion container with clean bottom borders and zero blocky framing -->
+            <div class="space-y-2 border-t border-stone-200/60">
+                
+                <!-- FAQ Item 1: Animated Accordion containing Step-by-Step timeline -->
+                <div class="border-b border-stone-200/60 py-5">
+                    <button class="faq-btn w-full text-left font-serif font-medium text-base md:text-lg text-[#3D4035] flex justify-between items-start gap-4 focus:outline-none group">
+                        <span class="flex items-start gap-4">
+                            <span class="text-stone-400 font-sans text-xs md:text-sm tracking-widest mt-1">01</span>
+                            <span class="group-hover:text-[#8C7A6B] transition-colors duration-300">How does this process work from start to finish?</span>
+                        </span>
+                        <span class="faq-icon-wrapper p-1 rounded-full bg-stone-100/50 group-hover:bg-[#8C7A6B]/10 transition-colors duration-300">
+                            <svg class="w-3.5 h-3.5 transform transition-transform duration-300 text-stone-500 group-hover:text-[#8C7A6B]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
                     </button>
-                    <div id="faq-1" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30 space-y-3">
-                        <p>Our collaborative pipeline relies on three distinct steps to deliver absolute layout certainty:</p>
-                        <p><strong>1. Submit Your Parameters:</strong> Fill out our comprehensive, 3-minute digital Discovery Questionnaire below. Tell us where you are heading, your culinary adventurousness, and the specific variables that are keeping you up at night.</p>
-                        <p><strong>2. Secure Your Retainer:</strong> Next, you will receive a digital invoice corresponding to your selected tier. Once processing settles, we immediately deploy our firsthand international research network to engineer your blueprint layout asset.</p>
-                        <p><strong>3. Receive Your Masterpiece:</strong> Within 7 to 10 business days, a beautifully formatted, highly scannable, custom digital document lands securely in your inbox, engineered to shift complex planning friction into unwavering global confidence.</p>
+                    <!-- Collapsible Container (Smooth height toggle) -->
+                    <div class="faq-content max-h-0 overflow-hidden opacity-0">
+                        <div class="pl-8 md:pl-10 pt-4 text-xs md:text-sm text-stone-600 leading-relaxed space-y-5">
+                            <p class="font-medium text-[#4E5142]">Our collaborative pipeline relies on three distinct steps to deliver absolute layout certainty:</p>
+                            
+                            <!-- Visual Vertical Timeline Grid -->
+                            <div class="relative border-l border-stone-200/80 pl-6 space-y-6 my-4 ml-2">
+                                <!-- Step 1 -->
+                                <div class="relative">
+                                    <span class="absolute -left-[29px] top-1.5 w-2 h-2 rounded-full bg-[#8C7A6B]"></span>
+                                    <h4 class="font-bold text-[10px] tracking-wider uppercase text-[#8C7A6B] mb-0.5">01. Submit Your Parameters</h4>
+                                    <p class="text-xs text-stone-500">Fill out our comprehensive, 3-minute digital Discovery Questionnaire below. Tell us where you are heading, your culinary adventurousness, and the specific variables that are keeping you up at night.</p>
+                                </div>
+                                <!-- Step 2 -->
+                                <div class="relative">
+                                    <span class="absolute -left-[29px] top-1.5 w-2 h-2 rounded-full bg-[#8C7A6B]"></span>
+                                    <h4 class="font-bold text-[10px] tracking-wider uppercase text-[#8C7A6B] mb-0.5">02. Secure Your Retainer</h4>
+                                    <p class="text-xs text-stone-500">Next, you will receive a digital invoice corresponding to your selected tier. Once processing settles, we immediately deploy our firsthand international research network to engineer your blueprint layout asset.</p>
+                                </div>
+                                <!-- Step 3 -->
+                                <div class="relative">
+                                    <span class="absolute -left-[29px] top-1.5 w-2 h-2 rounded-full bg-[#8C7A6B]"></span>
+                                    <h4 class="font-bold text-[10px] tracking-wider uppercase text-[#8C7A6B] mb-0.5">03. Receive Your Masterpiece</h4>
+                                    <p class="text-xs text-stone-500">Within 7 to 10 business days, a beautifully formatted, highly scannable, custom digital document lands securely in your inbox, engineered to shift complex planning friction into unwavering global confidence.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
                 <!-- Strategy: Overcome the pricing objection by shifting the focus from booking to curation. -->
-                <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
-                    <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(2)">
-                        <span>Why should I pay a planning retainer when I can book travel myself or use a traditional agent for free?</span>
-                        <svg id="icon-2" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                <div class="border-b border-stone-200/60 py-5">
+                    <button class="faq-btn w-full text-left font-serif font-medium text-base md:text-lg text-[#3D4035] flex justify-between items-start gap-4 focus:outline-none group">
+                        <span class="flex items-start gap-4">
+                            <span class="text-stone-400 font-sans text-xs md:text-sm tracking-widest mt-1">02</span>
+                            <span class="group-hover:text-[#8C7A6B] transition-colors duration-300">Why should I pay a planning retainer when I can book travel myself or use a traditional agent for free?</span>
+                        </span>
+                        <span class="faq-icon-wrapper p-1 rounded-full bg-stone-100/50 group-hover:bg-[#8C7A6B]/10 transition-colors duration-300">
+                            <svg class="w-3.5 h-3.5 transform transition-transform duration-300 text-stone-500 group-hover:text-[#8C7A6B]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
                     </button>
-                    <div id="faq-2" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30">
-                        Traditional travel agents are primarily compensated through backend commissions from major suppliers, meaning their recommendations can sometimes lean toward large resort chains or bulk cruises that offer standard payouts. At The Conscious Compass, we operate entirely on an independent, fee-for-service model. You are paying for an elite level of custom curation, deep international landscape research, and surgical logistics management. Because we are not beholden to commission structures, our loyalty belongs 100% to you. We filter out the noise to hand-select independent boutique stays, hyper-local eco-lodges, and off-the-beaten-path experiences that match your exact comfort level, physical agility, and dietary needs. We save you dozens of hours of frustrating guesswork, giving you complete spatial confidence before you fly.
+                    <div class="faq-content max-h-0 overflow-hidden opacity-0">
+                        <div class="pl-8 md:pl-10 pt-4 text-xs md:text-sm text-stone-600 leading-relaxed border-l-2 border-[#8C7A6B]/30 pl-4 ml-2">
+                            Traditional travel agents are primarily compensated through backend commissions from major suppliers, meaning their recommendations can sometimes lean toward large resort chains or bulk cruises that offer standard payouts. At The Conscious Compass, we operate entirely on an independent, fee-for-service model. You are paying for an elite level of custom curation, deep international landscape research, and surgical logistics management. Because we are not beholden to commission structures, our loyalty belongs 100% to you. We filter out the noise to hand-select independent boutique stays, hyper-local eco-lodges, and off-the-beaten-path experiences that match your exact comfort level, physical agility, and dietary needs. We save you dozens of hours of frustrating guesswork, giving you complete spatial confidence before you fly.
+                        </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
                 <!-- Strategy: Clarify your business operations so clients know exactly what is expected of them. -->
-                <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
-                    <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(3)">
-                        <span>Since you are a design-only planner, how do my hotels and excursions actually get booked?</span>
-                        <svg id="icon-3" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                <div class="border-b border-stone-200/60 py-5">
+                    <button class="faq-btn w-full text-left font-serif font-medium text-base md:text-lg text-[#3D4035] flex justify-between items-start gap-4 focus:outline-none group">
+                        <span class="flex items-start gap-4">
+                            <span class="text-stone-400 font-sans text-xs md:text-sm tracking-widest mt-1">03</span>
+                            <span class="group-hover:text-[#8C7A6B] transition-colors duration-300">Since you are a design-only planner, how do my hotels and excursions actually get booked?</span>
+                        </span>
+                        <span class="faq-icon-wrapper p-1 rounded-full bg-stone-100/50 group-hover:bg-[#8C7A6B]/10 transition-colors duration-300">
+                            <svg class="w-3.5 h-3.5 transform transition-transform duration-300 text-stone-500 group-hover:text-[#8C7A6B]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
                     </button>
-                    <div id="faq-3" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30">
-                        We design the blueprint; you lock in the reservations. Once your final custom itinerary or research dossier is completed, you will receive a beautifully formatted, comprehensive digital document. For all recommended accommodations, trains, private transfers, and curated excursions, we provide direct, vetted reservation links. All you have to do is click and input your payment details. This transparent method ensures that you maintain absolute control over your loyalty points, personal credit card data, and cancellation policies, with zero hidden markups or third-party booking fees.
+                    <div class="faq-content max-h-0 overflow-hidden opacity-0">
+                        <div class="pl-8 md:pl-10 pt-4 text-xs md:text-sm text-stone-600 leading-relaxed border-l-2 border-[#8C7A6B]/30 pl-4 ml-2">
+                            We design the blueprint; you lock in the reservations. Once your final custom itinerary or research dossier is completed, you will receive a beautifully formatted, comprehensive digital document. For all recommended accommodations, trains, private transfers, and curated excursions, we provide direct, vetted reservation links. All you have to do is click and input your payment details. This transparent method ensures that you maintain absolute control over your loyalty points, personal credit card data, and cancellation policies, with zero hidden markups or third-party booking fees.
+                        </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
                 <!-- Strategy: Establish clear legal and professional boundaries regarding liability. -->
-                <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
-                    <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(4)">
-                        <span>What happens if my flight gets delayed or a hotel cancellation happens while I am on my trip?</span>
-                        <svg id="icon-4" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                <div class="border-b border-stone-200/60 py-5">
+                    <button class="faq-btn w-full text-left font-serif font-medium text-base md:text-lg text-[#3D4035] flex justify-between items-start gap-4 focus:outline-none group">
+                        <span class="flex items-start gap-4">
+                            <span class="text-stone-400 font-sans text-xs md:text-sm tracking-widest mt-1">04</span>
+                            <span class="group-hover:text-[#8C7A6B] transition-colors duration-300">What happens if my flight gets delayed or a hotel cancellation happens while I am on my trip?</span>
+                        </span>
+                        <span class="faq-icon-wrapper p-1 rounded-full bg-stone-100/50 group-hover:bg-[#8C7A6B]/10 transition-colors duration-300">
+                            <svg class="w-3.5 h-3.5 transform transition-transform duration-300 text-stone-500 group-hover:text-[#8C7A6B]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
                     </button>
-                    <div id="faq-4" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30">
-                        Because we are a design, curation, and intelligence service rather than a transactional booking agency, the legal contracts for your reservations exist directly between you and the vendors you choose to book (the airlines, boutique hotels, or local tour operators). While we do not provide 24/7 on-trip crisis management or re-booking services, your custom blueprint is intentionally designed to mitigate these risks. We build robust time tolerances into your transit networks, provide clear alternative routes, and supply emergency local contact protocols right inside your dossier so you can smoothly navigate unexpected travel anomalies with complete independence. We highly recommend securing comprehensive travel insurance for every international journey.
+                    <div class="faq-content max-h-0 overflow-hidden opacity-0">
+                        <div class="pl-8 md:pl-10 pt-4 text-xs md:text-sm text-stone-600 leading-relaxed border-l-2 border-[#8C7A6B]/30 pl-4 ml-2">
+                            Because we are a design, curation, and intelligence service rather than a transactional booking agency, the legal contracts for your reservations exist directly between you and the vendors you choose to book (the airlines, boutique hotels, or local tour operators). While we do not provide 24/7 on-trip crisis management or re-booking services, your custom blueprint is intentionally designed to mitigate these risks. We build robust time tolerances into your transit networks, provide clear alternative routes, and supply emergency local contact protocols right inside your dossier so you can smoothly navigate unexpected travel anomalies with complete independence. We highly recommend securing comprehensive travel insurance for every international journey.
+                        </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 5 -->
                 <!-- Strategy: Turn a massive pain point for high-end travelers into a premium asset. -->
-                <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
-                    <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(5)">
-                        <span>I have severe food allergies / strict dietary boundaries. Can your curated recommendations accommodate me safely?</span>
-                        <svg id="icon-5" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                <div class="border-b border-stone-200/60 py-5">
+                    <button class="faq-btn w-full text-left font-serif font-medium text-base md:text-lg text-[#3D4035] flex justify-between items-start gap-4 focus:outline-none group">
+                        <span class="flex items-start gap-4">
+                            <span class="text-stone-400 font-sans text-xs md:text-sm tracking-widest mt-1">05</span>
+                            <span class="group-hover:text-[#8C7A6B] transition-colors duration-300">I have severe food allergies / strict dietary boundaries. Can your curated recommendations accommodate me safely?</span>
+                        </span>
+                        <span class="faq-icon-wrapper p-1 rounded-full bg-stone-100/50 group-hover:bg-[#8C7A6B]/10 transition-colors duration-300">
+                            <svg class="w-3.5 h-3.5 transform transition-transform duration-300 text-stone-500 group-hover:text-[#8C7A6B]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
                     </button>
-                    <div id="faq-5" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30">
-                        Absolutely. In fact, this is one of our primary specialties. Cross-referencing safe dining in unfamiliar countries can be incredibly stressful. When building your custom itinerary or research dossier, we don't just pull arbitrary restaurant reviews. We deeply analyze your dietary profile—whether you are strictly vegan, managing celiac disease, or navigating severe food allergies. We curate dedicated dining blueprints and, for our Tier 3 flagship clients, we explicitly verify the physical kitchen frameworks and kitchenette capabilities of our recommended lodging to ensure your safety and comfort are fully integrated into the architecture of your trip.
+                    <div class="faq-content max-h-0 overflow-hidden opacity-0">
+                        <div class="pl-8 md:pl-10 pt-4 text-xs md:text-sm text-stone-600 leading-relaxed border-l-2 border-[#8C7A6B]/30 pl-4 ml-2">
+                            Absolutely. In fact, this is one of our primary specialties. Cross-referencing safe dining in unfamiliar countries can be incredibly stressful. When building your custom itinerary or research dossier, we don't just pull arbitrary restaurant reviews. We deeply analyze your dietary profile—whether you are strictly vegan, managing celiac disease, or navigating severe food allergies. We curate dedicated dining blueprints and, for our Tier 3 flagship clients, we explicitly verify the physical kitchen frameworks and kitchenette capabilities of our recommended lodging to ensure your safety and comfort are fully integrated into the architecture of your trip.
+                        </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 6 -->
                 <!-- Strategy: Show that you are a collaborative partner while keeping "scope creep" tightly controlled. -->
-                <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
-                    <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(6)">
-                        <span>Can I request revisions if the initial blueprint pace doesn't feel quite right?</span>
-                        <svg id="icon-6" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                <div class="border-b border-stone-200/60 py-5">
+                    <button class="faq-btn w-full text-left font-serif font-medium text-base md:text-lg text-[#3D4035] flex justify-between items-start gap-4 focus:outline-none group">
+                        <span class="flex items-start gap-4">
+                            <span class="text-stone-400 font-sans text-xs md:text-sm tracking-widest mt-1">06</span>
+                            <span class="group-hover:text-[#8C7A6B] transition-colors duration-300">Can I request revisions if the initial blueprint pace doesn't feel quite right?</span>
+                        </span>
+                        <span class="faq-icon-wrapper p-1 rounded-full bg-stone-100/50 group-hover:bg-[#8C7A6B]/10 transition-colors duration-300">
+                            <svg class="w-3.5 h-3.5 transform transition-transform duration-300 text-stone-500 group-hover:text-[#8C7A6B]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
                     </button>
-                    <div id="faq-6" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30">
-                        Yes, collaboration is a vital part of the artistic design process. For our Tier 3 Custom Trip Retainer, your investment includes up to two complete rounds of revisions. After receiving your initial draft blueprint, we will review the pacing, accommodation styles, and daily flow together, fine-tuning the elements until it perfectly mirrors your ideal travel energy. For our Tier 1 and Tier 2 services, our comprehensive intake form is designed to capture your exact parameters upfront so your finalized dossier hits the mark right out of the gate.
+                    <div class="faq-content max-h-0 overflow-hidden opacity-0">
+                        <div class="pl-8 md:pl-10 pt-4 text-xs md:text-sm text-stone-600 leading-relaxed border-l-2 border-[#8C7A6B]/30 pl-4 ml-2">
+                            Yes, collaboration is a vital part of the artistic design process. For our Tier 3 Custom Trip Retainer, your investment includes up to two complete rounds of revisions. After receiving your initial draft blueprint, we will review the pacing, accommodation styles, and daily flow together, fine-tuning the elements until it perfectly mirrors your ideal travel energy. For our Tier 1 and Tier 2 services, our comprehensive intake form is designed to capture your exact parameters upfront so your finalized dossier hits the mark right out of the gate.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -523,7 +714,7 @@
                             </label>
                             <label class="flex items-start gap-3 p-2.5 bg-white border border-stone-100 rounded-xl cursor-pointer">
                                 <input type="radio" name="physical_agility" value="summit" class="accent-[#8C7A6B] mt-0.5">
-                                <span><strong class="text-stone-800 block">The Summit Seekers (Advanced):</strong> Bring on steep vertical profiles, scrambles, higher altitudes, or technical water crossings (6+ miles).</span>
+                                <span><strong class="text-stone-800 block">The Summit Seekers (Advanced):</strong> Bring on steep vertical climbs, rocky scrambles, higher altitudes, or technical water crossings (6+ miles).</span>
                             </label>
                             <label class="flex items-start gap-3 p-2.5 bg-white border border-stone-100 rounded-xl cursor-pointer">
                                 <input type="radio" name="physical_agility" value="accessible" class="accent-[#8C7A6B] mt-0.5">
@@ -818,18 +1009,42 @@
             }
         }
 
-        function toggleFAQ(id) {
-            const faqContent = document.getElementById(`faq-${id}`);
-            const faqIcon = document.getElementById(`icon-${id}`);
+        // --- SILKY SMOOTH SLIDING ACCORDION ENGINE (FAQ REWRITE) ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqBtns = document.querySelectorAll('.faq-btn');
             
-            if (faqContent.classList.contains('hidden')) {
-                faqContent.classList.remove('hidden');
-                faqIcon.classList.add('rotate-180');
-            } else {
-                faqContent.classList.add('hidden');
-                faqIcon.classList.remove('rotate-180');
-            }
-        }
+            faqBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const parent = this.parentElement;
+                    const content = parent.querySelector('.faq-content');
+                    const iconWrapper = this.querySelector('.faq-icon-wrapper svg');
+                    
+                    // Close other currently expanded items for pure, premium single-accordion flow
+                    faqBtns.forEach(otherBtn => {
+                        if (otherBtn !== this) {
+                            const otherParent = otherBtn.parentElement;
+                            const otherContent = otherParent.querySelector('.faq-content');
+                            const otherIconWrapper = otherParent.querySelector('.faq-icon-wrapper svg');
+                            
+                            otherContent.style.maxHeight = null;
+                            otherContent.style.opacity = "0";
+                            otherIconWrapper.classList.remove('rotate-180');
+                        }
+                    });
+
+                    // Toggle selected accordion with native transition animations
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        content.style.opacity = "0";
+                        iconWrapper.classList.remove('rotate-180');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.opacity = "1";
+                        iconWrapper.classList.add('rotate-180');
+                    }
+                });
+            });
+        });
 
         // --- FORM LIVE BRANCHING LOGIC ENGINE ---
         document.addEventListener('DOMContentLoaded', function() {
@@ -892,6 +1107,60 @@
                         }
                     }
                 });
+            });
+        });
+
+        // --- INTERACTIVE hummINGBIRD LOGIC ENGINES ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const bird = document.getElementById('hummingbird');
+            let lastScrollY = window.scrollY;
+            let targetRotation = 0;
+            let currentRotation = 0;
+
+            // Tilt hummingbird smoothly based on scroll speed & direction
+            window.addEventListener('scroll', function() {
+                const currentScrollY = window.scrollY;
+                const delta = currentScrollY - lastScrollY;
+                lastScrollY = currentScrollY;
+
+                // Dynamic tilt calculation
+                targetRotation = Math.min(Math.max(delta * 0.15, -25), 25);
+                
+                // Slowly decay tilt back to zero
+                clearTimeout(window.scrollTiltTimeout);
+                window.scrollTiltTimeout = setTimeout(() => {
+                    targetRotation = 0;
+                }, 150);
+            }, { passive: true });
+
+            // Render loop for butter-smooth animation dampening
+            function animateBird() {
+                currentRotation += (targetRotation - currentRotation) * 0.1;
+                bird.style.transform = `rotate(${currentRotation}deg)`;
+                requestAnimationFrame(animateBird);
+            }
+            requestAnimationFrame(animateBird);
+
+            // Playful fly-away mouse reaction
+            bird.addEventListener('mouseenter', function() {
+                // Random position flutter offset
+                const randomX = (Math.random() - 0.5) * 40;
+                const randomY = (Math.random() - 0.5) * 40;
+                
+                bird.style.transition = 'transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28)';
+                bird.style.transform = `translate(${randomX}px, ${randomY}px) scale(1.15) rotate(${currentRotation + 10}deg)`;
+                
+                // Speed up wings during flutter
+                const wings = bird.querySelectorAll('.wing-left-anim, .wing-right-anim');
+                wings.forEach(w => w.style.animationDuration = '0.06s');
+            });
+
+            bird.addEventListener('mouseleave', function() {
+                bird.style.transition = 'transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28)';
+                bird.style.transform = `translate(0px, 0px) scale(1) rotate(0deg)`;
+                
+                const wings = bird.querySelectorAll('.wing-left-anim, .wing-right-anim');
+                wings.forEach(w => w.style.animationDuration = '0.12s');
             });
         });
 
