@@ -21,7 +21,7 @@
             transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
         }
 
-        /* --- WATERCOLOR FLUTTERING hummINGBIRD ANIMATIONS --- */
+        /* --- WATERCOLOR FLUTTERING HUMMINGBIRD ANIMATIONS --- */
         /* Gentle, organic floating bobbing */
         @keyframes floatBob {
             0%, 100% {
@@ -56,11 +56,11 @@
             filter: drop-shadow(0 4px 12px rgba(61, 64, 53, 0.15));
         }
         .wing-left-anim {
-            transform-origin: 32px 35px;
+            transform-origin: 48px 42px; /* Updated to match new anatomical shoulder joint */
             animation: wingFlapLeft 0.12s linear infinite;
         }
         .wing-right-anim {
-            transform-origin: 48px 37px;
+            transform-origin: 52px 43px; /* Updated to match new anatomical shoulder joint */
             animation: wingFlapRight 0.12s linear infinite;
         }
     </style>
@@ -77,7 +77,7 @@
 
     <!-- FLOATING WATERCOLOR HUMMINGBIRD CHARACTER -->
     <div id="hummingbird" class="bird-container fixed top-32 right-4 md:right-12 z-50 w-20 h-20 md:w-28 md:h-20 pointer-events-auto cursor-pointer select-none">
-        <svg viewBox="0 0 100 100" class="w-full h-full">
+        <svg viewBox="0 0 120 120" class="w-full h-full">
             <defs>
                 <!-- Iridescent South American feather gradients -->
                 <linearGradient id="beakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -90,12 +90,12 @@
                     <stop offset="100%" stop-color="#4A148C" stop-opacity="0.75" />
                 </linearGradient>
                 <linearGradient id="wingLeftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#00838F" stop-opacity="0.7" />
-                    <stop offset="100%" stop-color="#8C7A6B" stop-opacity="0.6" />
+                    <stop offset="0%" stop-color="#2D3A3A" stop-opacity="0.75" />
+                    <stop offset="100%" stop-color="#5B4F47" stop-opacity="0.6" />
                 </linearGradient>
                 <linearGradient id="wingRightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#2E7D32" stop-opacity="0.7" />
-                    <stop offset="100%" stop-color="#8C7A6B" stop-opacity="0.6" />
+                    <stop offset="0%" stop-color="#1E2B24" stop-opacity="0.75" />
+                    <stop offset="100%" stop-color="#5B4F47" stop-opacity="0.6" />
                 </linearGradient>
                 <linearGradient id="tailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#4A148C" stop-opacity="0.8" />
@@ -103,24 +103,24 @@
                 </linearGradient>
             </defs>
 
-            <!-- Long, delicate needle beak -->
-            <path d="M 32 35 L 2 28" stroke="url(#beakGrad)" stroke-width="2" stroke-linecap="round" />
+            <!-- Anatomically realistic, slender needle beak -->
+            <path d="M 38 40 Q 18 36 2 34" fill="none" stroke="url(#beakGrad)" stroke-width="1.5" stroke-linecap="round" />
 
-            <!-- Soft watercolor tail feathers -->
-            <path d="M 68 45 C 80 62, 85 75, 82 82 C 78 82, 72 70, 60 52 Z" fill="url(#tailGrad)" filter="url(#watercolor-bleed)" />
-            <path d="M 65 48 C 76 65, 78 78, 76 80 C 72 80, 68 70, 58 53 Z" fill="url(#tailGrad)" filter="url(#watercolor-bleed)" opacity="0.8" />
+            <!-- Soft split watercolor tail feathers -->
+            <path d="M 80 65 C 92 80, 102 95, 105 105 C 98 102, 88 88, 78 71 Z" fill="url(#tailGrad)" filter="url(#watercolor-bleed)" />
+            <path d="M 76 68 C 88 84, 94 100, 95 108 C 90 102, 82 88, 74 72 Z" fill="url(#tailGrad)" filter="url(#watercolor-bleed)" opacity="0.8" />
 
-            <!-- Main textured watercolor body -->
-            <path d="M 30 35 C 45 32, 58 38, 65 48 C 58 55, 48 58, 38 52 C 28 46, 25 38, 30 35 Z" fill="url(#bodyGrad)" filter="url(#watercolor-bleed)" />
+            <!-- Main textured watercolor body & back (anatomical throat-chest-belly curve) -->
+            <path d="M 38 40 C 45 34, 52 35, 60 40 C 70 45, 78 55, 82 68 C 80 74, 72 74, 65 70 C 52 65, 44 58, 40 48 C 36 44, 34 42, 38 40 Z" fill="url(#bodyGrad)" filter="url(#watercolor-bleed)" />
 
-            <!-- Fluttering layered wings -->
+            <!-- Layered Wings: sickle-shaped like real hummingbirds -->
             <!-- Left Wing (Behind) -->
-            <path class="wing-left-anim" d="M 32 35 C 25 15, 42 2, 48 5 C 50 12, 42 28, 32 35 Z" fill="url(#wingLeftGrad)" filter="url(#watercolor-bleed)" />
+            <path class="wing-left-anim" d="M 48 42 C 40 25, 48 12, 60 10 C 60 22, 55 34, 48 42 Z" fill="url(#wingLeftGrad)" filter="url(#watercolor-bleed)" />
             <!-- Right Wing (Front) -->
-            <path class="wing-right-anim" d="M 48 37 C 58 15, 75 5, 80 10 C 78 20, 62 30, 48 37 Z" fill="url(#wingRightGrad)" filter="url(#watercolor-bleed)" />
+            <path class="wing-right-anim" d="M 52 43 C 58 25, 72 10, 88 5 C 84 20, 72 36, 55 45 Z" fill="url(#wingRightGrad)" filter="url(#watercolor-bleed)" />
 
-            <!-- Delicate watercolor eye drop -->
-            <circle cx="34" cy="33" r="1.5" fill="#2C302E" opacity="0.9" />
+            <!-- Delicate eye placement -->
+            <circle cx="42" cy="38" r="1" fill="#2C302E" opacity="0.95" />
         </svg>
     </div>
 
@@ -186,12 +186,24 @@
                         <div class="md:w-2/5 w-full flex flex-col gap-5 shrink-0">
                             <!-- Portrait Frame -->
                             <div class="rounded-2xl overflow-hidden border border-stone-200/60 shadow-sm aspect-square bg-stone-100">
-                                <img src="IMG_0608.jpeg" alt="Travel Architect Portrait" class="w-full h-full object-cover">
+                                <img id="about-portrait" src="IMG_0608.jpeg" alt="Travel Architect Portrait" class="w-full h-full object-cover transition-opacity duration-500 opacity-0" onload="this.classList.remove('opacity-0')">
                             </div>
                             <!-- Logo Frame -->
                             <div class="rounded-2xl overflow-hidden border border-stone-200/60 shadow-sm bg-white p-2">
-                                <img src="The conscious compass travel co.Culture background logo.jpg" alt="The Conscious Compass Logo" class="w-full h-auto rounded-xl">
+                                <img id="about-logo" src="The conscious compass travel co.Culture background logo.jpg" alt="The Conscious Compass Logo" class="w-full h-auto rounded-xl transition-opacity duration-500 opacity-0" onload="this.classList.remove('opacity-0')">
                             </div>
+
+                            <script>
+                                // Fallback scripts to keep the preview beautiful before you upload your local assets
+                                document.getElementById('about-portrait').onerror = function() {
+                                    this.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
+                                    this.classList.remove('opacity-0');
+                                };
+                                document.getElementById('about-logo').onerror = function() {
+                                    this.src = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80";
+                                    this.classList.remove('opacity-0');
+                                };
+                            </script>
                         </div>
                     </div>
                 </div>
