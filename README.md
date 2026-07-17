@@ -89,130 +89,105 @@
 
         <hr class="border-stone-200/60 my-16">
 
-        <!-- Section 1.5: The Problem & Promise Section -->
-        <section class="max-w-2xl mx-auto mb-16 text-center bg-white/40 border border-stone-200/40 rounded-3xl p-6 md:p-10 shadow-sm">
-            <span class="text-xs tracking-[0.2em] text-[#8C7A6B] uppercase font-bold">The Core Paradox</span>
-            <h2 class="text-2xl md:text-3xl font-medium text-[#3D4035] mt-2 mb-6 leading-tight">
-                Navigating a foreign landscape should feel exhilarating—not exhausting.
-            </h2>
-            
-            <p class="text-sm md:text-base text-stone-600 leading-relaxed mb-6 text-left max-w-xl mx-auto">
-                When you close your eyes and picture your next international journey, you see deep cultural immersion, wild topographies, and unforgettable local flavors. But the reality of planning it often means drowning in tabs:
-            </p>
-
-            <!-- Embedded Tab Questions -->
-            <div class="max-w-xl mx-auto bg-stone-100/40 border border-stone-200/50 rounded-2xl p-5 mb-6 space-y-3.5 text-left text-xs md:text-sm text-stone-600 italic">
-                <div class="flex gap-3 items-start">
-                    <span class="text-[#8C7A6B]">🗺️</span>
-                    <span>Is this regional train line reliable?</span>
-                </div>
-                <div class="flex gap-3 items-start border-t border-stone-200/40 pt-3.5">
-                    <span class="text-[#8C7A6B]">🛡️</span>
-                    <span>Which neighborhoods are truly safe to wander at night?</span>
-                </div>
-                <div class="flex gap-3 items-start border-t border-stone-200/40 pt-3.5">
-                    <span class="text-[#8C7A6B]">🥦</span>
-                    <span>Can this remote boutique eco-lodge safely accommodate my severe dietary restrictions?</span>
-                </div>
-            </div>
-
-            <p class="text-sm md:text-base text-stone-600 leading-relaxed text-left max-w-xl mx-auto">
-                That is where we come in. We bridge the gap between raw, immersive adventure and sophisticated, stress-free execution. You don't need a traditional booking agent to sell you a cookie-cutter cruise package. You need an elite logistical blueprint designed by a specialist who has spent years successfully navigating complex international terrains.
-            </p>
-        </section>
-
-        <hr class="border-stone-200/60 my-16">
-
-        <!-- Section 2: Service Tiers -->
-        <section class="mb-20">
+        <!-- Section 2: Horizontal Service Tiers -->
+        <section class="mb-20 max-w-4xl mx-auto">
             <div class="text-center mb-12">
                 <span class="text-xs tracking-[0.2em] text-[#8C7A6B] uppercase font-bold">Services & Blueprints</span>
                 <h2 class="text-3xl md:text-4xl font-medium text-[#3D4035] mt-2">The Three Curated Tiers</h2>
                 <p class="text-stone-500 text-sm mt-3">Choose the level of design, scaffolding, and support your journey requires.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <div class="space-y-6">
                 <!-- Tier 1 -->
-                <div class="bg-white p-6 border border-stone-200/60 rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition">
-                    <div>
-                        <span class="text-xs font-bold tracking-wider text-[#8C7A6B] uppercase">Tier 1</span>
-                        <h3 class="text-xl font-bold text-[#3D4035] mt-1 mb-2">The Deep-Dive Research Blueprint</h3>
-                        <p class="text-2xl font-semibold text-[#4E5142] mb-4">$175 <span class="text-xs text-stone-500 font-normal">/ focus topic</span></p>
+                <div class="bg-white p-6 md:p-8 border border-stone-200/60 rounded-3xl flex flex-col md:flex-row gap-6 md:gap-8 shadow-sm hover:shadow-md transition items-stretch">
+                    <div class="md:w-1/4 flex flex-col justify-between border-b md:border-b-0 md:border-r border-stone-200/40 pb-5 md:pb-0 md:pr-6 min-w-[200px]">
+                        <div>
+                            <span class="text-xs font-bold tracking-wider text-[#8C7A6B] uppercase">Tier 1</span>
+                            <h3 class="text-lg font-bold text-[#3D4035] mt-1 leading-snug">The Deep-Dive Research Blueprint</h3>
+                            <p class="text-2xl font-semibold text-[#4E5142] mt-3">$175 <span class="text-xs text-stone-500 font-normal block md:inline">/ focus topic</span></p>
+                        </div>
+                        <a href="#discover" class="block text-center mt-6 bg-stone-100 hover:bg-stone-200 text-[#3D4035] font-semibold text-xs py-3 rounded-xl transition">
+                            Select Blueprint ➔
+                        </a>
+                    </div>
+                    <div class="md:w-3/4 flex flex-col justify-center space-y-4 text-xs md:text-sm text-stone-600">
+                        <p class="italic text-stone-700"><strong class="text-stone-800 font-semibold">Perfect For:</strong> The confident DIY traveler or anxious planner who loves booking their own trips but wants an expert to eliminate the stress of logistics, safety, or complex international entry requirements.</p>
+                        <p><strong class="text-stone-800 font-semibold">What You Receive:</strong> A highly organized, comprehensive custom PDF document focusing entirely on what is keeping you up at night.</p>
                         
-                        <div class="space-y-4 text-xs text-stone-600 border-t border-stone-100 pt-4">
-                            <p class="italic"><strong class="text-stone-800 font-medium">Perfect For:</strong> The confident DIY traveler or anxious planner who loves booking their own trips but wants an expert to eliminate the stress of logistics, safety, or complex international entry requirements.</p>
-                            <p><strong class="text-stone-800 font-semibold">What You Receive:</strong> A highly organized, comprehensive custom PDF document focusing entirely on what is keeping you up at night.</p>
-                            
-                            <div class="pt-2 space-y-2.5">
-                                <span class="block font-bold tracking-wider text-[10px] uppercase text-stone-400">Included Deliverables:</span>
-                                <div class="flex gap-2"><span class="text-stone-400">🗺️</span> <span><strong class="text-stone-800">Custom Logistics Map:</strong> Step-by-step navigation breakdowns for local public transit networks, train systems, or reliable private transit options.</span></div>
-                                <div class="flex gap-2"><span class="text-stone-400">🛂</span> <span><strong class="text-stone-800">Bureaucracy & Entry Guide:</strong> Clear, up-to-date visa requirements, reciprocity fees, mandatory digital entry forms, and immunization protocols.</span></div>
-                                <div class="flex gap-2"><span class="text-stone-400">🛡️</span> <span><strong class="text-stone-800">Cultural & Safety Briefing:</strong> Neighborhood safety breakdowns, common local scams to avoid, cultural etiquette/dress codes, and emergency contact protocols.</span></div>
-                                <div class="flex gap-2"><span class="text-stone-400">📋</span> <span><strong class="text-stone-800">Preparation & Packing Checklists:</strong> Tailored gear recommendations for the destination's specific climate, topography, or activities.</span></div>
+                        <div class="pt-2 space-y-2.5">
+                            <span class="block font-bold tracking-wider text-[10px] uppercase text-stone-400">Included Deliverables:</span>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-xs">
+                                <div class="flex gap-2"><span class="text-stone-400">🗺️</span> <span><strong class="text-stone-800">Custom Logistics Map:</strong> Step-by-step public transit breakdowns, train routing, or private transit options.</span></div>
+                                <div class="flex gap-2"><span class="text-stone-400">🛂</span> <span><strong class="text-stone-800">Bureaucracy Guide:</strong> Up-to-date visa checkpoints, digital landing forms, and entry immunization protocols.</span></div>
+                                <div class="flex gap-2"><span class="text-stone-400">🛡️</span> <span><strong class="text-stone-800">Safety Briefing:</strong> Neighborhood security maps, active regional scams to avoid, and emergency contact points.</span></div>
+                                <div class="flex gap-2"><span class="text-stone-400">📋</span> <span><strong class="text-stone-800">Packing Checklists:</strong> Tailored gear profiles for your destination's explicit topography or micro-climate.</span></div>
                             </div>
                         </div>
                     </div>
-                    <a href="#discover" class="block text-center mt-8 bg-stone-100 hover:bg-stone-200 text-[#3D4035] font-semibold text-xs py-3 rounded-lg transition">
-                        Select Blueprint ➔
-                    </a>
                 </div>
 
                 <!-- Tier 2 -->
-                <div class="bg-white p-6 border border-stone-200/60 rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition">
-                    <div>
-                        <span class="text-xs font-bold tracking-wider text-[#8C7A6B] uppercase">Tier 2</span>
-                        <h3 class="text-xl font-bold text-[#3D4035] mt-1 mb-2">The "Day-Hacker" Partial Itinerary</h3>
-                        <p class="text-2xl font-semibold text-[#4E5142] mb-4">$75 <span class="text-xs text-stone-500 font-normal">/ planned day</span></p>
+                <div class="bg-white p-6 md:p-8 border border-stone-200/60 rounded-3xl flex flex-col md:flex-row gap-6 md:gap-8 shadow-sm hover:shadow-md transition items-stretch">
+                    <div class="md:w-1/4 flex flex-col justify-between border-b md:border-b-0 md:border-r border-stone-200/40 pb-5 md:pb-0 md:pr-6 min-w-[200px]">
+                        <div>
+                            <span class="text-xs font-bold tracking-wider text-[#8C7A6B] uppercase">Tier 2</span>
+                            <h3 class="text-lg font-bold text-[#3D4035] mt-1 leading-snug">The "Day-Hacker" Partial Itinerary</h3>
+                            <p class="text-2xl font-semibold text-[#4E5142] mt-3">$75 <span class="text-xs text-stone-500 font-normal block md:inline">/ planned day</span></p>
+                            <p class="text-[10px] text-stone-400 italic mt-1">*Minimum of 2 days required</p>
+                        </div>
+                        <a href="#discover" class="block text-center mt-6 bg-stone-100 hover:bg-stone-200 text-[#3D4035] font-semibold text-xs py-3 rounded-xl transition">
+                            Select Day-Hacker ➔
+                        </a>
+                    </div>
+                    <div class="md:w-3/4 flex flex-col justify-center space-y-4 text-xs md:text-sm text-stone-600">
+                        <p class="italic text-stone-700"><strong class="text-stone-800 font-semibold">Perfect For:</strong> Travelers who have 70% of their trip figured out but are completely stuck on how to maximize a specific multi-day stretch, handle a complex transit day, or curate a flawless hidden-gem experience.</p>
+                        <p><strong class="text-stone-800 font-semibold">What You Receive:</strong> Seamless, hourly time-blocked execution blueprints for the specific dates requested, designed to plug directly into your existing calendar.</p>
                         
-                        <div class="space-y-4 text-xs text-stone-600 border-t border-stone-100 pt-4">
-                            <p class="italic"><strong class="text-stone-800 font-medium">Perfect For:</strong> Travelers who have 70% of their trip figured out but are completely stuck on how to maximize a specific multi-day stretch, handle a complex transit day, or curate a flawless hidden-gem experience.</p>
-                            <p class="text-stone-500 italic font-medium -mt-2">*Minimum of 2 days required</p>
-                            <p><strong class="text-stone-800 font-semibold">What You Receive:</strong> Seamless, hourly time-blocked execution blueprints for the specific dates requested, designed to plug directly into your existing calendar.</p>
-                            
-                            <div class="pt-2 space-y-2.5">
-                                <span class="block font-bold tracking-wider text-[10px] uppercase text-stone-400">Included Deliverables:</span>
-                                <div class="flex gap-2"><span class="text-stone-400">⏱️</span> <span><strong class="text-stone-800">Optimized Flow:</strong> Minute-by-minute or block-by-block pacing to ensure you aren't wasting time crisscrossing a foreign city.</span></div>
-                                <div class="flex gap-2"><span class="text-stone-400">🍽️</span> <span><strong class="text-stone-800">Curated Dining & Activity Matches:</strong> Hidden-gem restaurant recommendations, local artisan shops, or neighborhood walking routes mapped out for those specific days.</span></div>
-                                <div class="flex gap-2"><span class="text-stone-400">📍</span> <span><strong class="text-stone-800">The "Getting There" Blueprint:</strong> Exact directions, transfer instructions, and timing details linking the day’s activities seamlessly together.</span></div>
+                        <div class="pt-2 space-y-2.5">
+                            <span class="block font-bold tracking-wider text-[10px] uppercase text-stone-400">Included Deliverables:</span>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-xs">
+                                <div class="flex gap-2"><span class="text-stone-400">⏱️</span> <span><strong class="text-stone-800">Optimized Flow:</strong> Minute-by-minute or block pacing to eliminate city crisscrossing bottlenecks.</span></div>
+                                <div class="flex gap-2"><span class="text-stone-400">🍽️</span> <span><strong class="text-stone-800">Curated Culinary Matches:</strong> Hidden local dining markers and market walking loops mapped for those specific dates.</span></div>
+                                <div class="flex gap-2"><span class="text-stone-400">📍</span> <span><strong class="text-stone-800">"Getting There" Blueprint:</strong> Explicit transfer directives, platform codes, and link connections.</span></div>
                             </div>
                         </div>
                     </div>
-                    <a href="#discover" class="block text-center mt-8 bg-stone-100 hover:bg-stone-200 text-[#3D4035] font-semibold text-xs py-3 rounded-lg transition">
-                        Select Day-Hacker ➔
-                    </a>
                 </div>
 
-                <!-- Tier 3 (Flagship Highlighted) -->
-                <div class="bg-[#FAF6F0] border-2 border-[#8C7A6B]/50 rounded-2xl p-6 flex flex-col justify-between shadow-sm relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#8C7A6B] text-white text-[9px] tracking-wider uppercase py-1 px-4 rounded-full font-bold shadow-xs">
+                <!-- Tier 3 (Flagship Row Highlight) -->
+                <div class="bg-[#FAF6F0] p-6 md:p-8 border-2 border-[#8C7A6B]/50 rounded-3xl flex flex-col md:flex-row gap-6 md:gap-8 shadow-sm relative overflow-hidden items-stretch">
+                    <div class="absolute top-0 right-0 bg-[#8C7A6B] text-white text-[9px] tracking-wider uppercase py-1 px-4 rounded-bl-xl font-bold shadow-xs">
                         Flagship Service
                     </div>
-                    <div>
-                        <span class="text-xs font-bold tracking-wider text-[#8C7A6B] uppercase mt-2 block">Tier 3</span>
-                        <h3 class="text-xl font-bold text-[#3D4035] mt-1 mb-2">The All-Inclusive Custom Trip Retainer</h3>
-                        
-                        <div class="space-y-1 mb-4">
-                            <p class="text-lg font-semibold text-[#4E5142]">$450 <span class="text-xs text-stone-500 font-normal">/ 1–7 Day Trip</span></p>
-                            <p class="text-lg font-semibold text-[#4E5142]">$750 <span class="text-xs text-stone-500 font-normal">/ 8–14 Day Journey</span></p>
-                            <p class="text-[10px] text-stone-500 italic">Trips 15+ days customized upon request</p>
-                        </div>
-                        
-                        <div class="space-y-4 text-xs text-stone-600 border-t border-stone-200/60 pt-4">
-                            <p class="italic"><strong class="text-stone-800 font-medium">Perfect For:</strong> The busy traveler who wants a flawless, deeply intentional international vacation from start to finish without spending 40 hours staring at travel forums and cross-referencing maps.</p>
-                            <p><strong class="text-stone-800 font-semibold">What You Receive:</strong> A complete, beautifully mapped, comprehensive end-to-end travel blueprint.</p>
+                    <div class="md:w-1/4 flex flex-col justify-between border-b md:border-b-0 md:border-r border-stone-300 pb-5 md:pb-0 md:pr-6 min-w-[200px]">
+                        <div>
+                            <span class="text-xs font-bold tracking-wider text-[#8C7A6B] uppercase block mt-2">Tier 3</span>
+                            <h3 class="text-lg font-bold text-[#3D4035] mt-1 leading-snug">The All-Inclusive Custom Retainer</h3>
                             
-                            <div class="pt-2 space-y-2.5">
-                                <span class="block font-bold tracking-wider text-[10px] uppercase text-stone-400">Included Deliverables:</span>
-                                <div class="flex gap-2"><span class="text-stone-400">✨</span> <span><strong class="text-stone-800">The Full Signature Blueprint:</strong> A comprehensive, multi-page travel master document matching Tier 1 and Tier 2 combined for your entire trip duration.</span></div>
-                                <div class="flex gap-2"><span class="text-stone-400">🏨</span> <span><strong class="text-stone-800">Curated Accommodation & Transport Shortlists:</strong> 2–3 hand-selected, verified boutique options per destination tailored to your style, complete with direct booking links.</span></div>
-                                <div class="flex gap-2"><span class="text-stone-400">🔄</span> <span><strong class="text-stone-800">Two Rounds of Revisions:</strong> Collaborative fine-tuning to make sure the pace, energy, and activities match your exact travel style perfectly.</span></div>
-                                <div class="flex gap-2"><span class="text-[#8C7A6B]">🎁</span> <span><strong class="text-stone-800">Complimentary Travel Print:</strong> Select any signature watercolor travel print from the website gallery—shipped directly to your home at no extra cost.</span></div>
+                            <div class="space-y-0.5 mt-3">
+                                <p class="text-base font-semibold text-[#4E5142]">$450 <span class="text-[10px] text-stone-500 font-normal">/ 1–7 Day Trip</span></p>
+                                <p class="text-base font-semibold text-[#4E5142]">$750 <span class="text-[10px] text-stone-500 font-normal">/ 8–14 Day Journey</span></p>
+                                <p class="text-[9px] text-stone-400 italic">Trips 15+ days customized on request</p>
+                            </div>
+                        </div>
+                        <a href="#discover" class="block text-center mt-6 bg-[#4E5142] hover:bg-[#3D4035] text-white font-semibold text-xs py-3 rounded-xl transition shadow-xs">
+                            Retain Architect ➔
+                        </a>
+                    </div>
+                    <div class="md:w-3/4 flex flex-col justify-center space-y-4 text-xs md:text-sm text-stone-600">
+                        <p class="italic text-stone-700"><strong class="text-stone-800 font-semibold">Perfect For:</strong> The busy traveler who wants a flawless, deeply intentional international vacation from start to finish without spending 40 hours staring at travel forums and cross-referencing maps.</p>
+                        <p><strong class="text-stone-800 font-semibold">What You Receive:</strong> A complete, beautifully mapped, comprehensive end-to-end travel blueprint.</p>
+                        
+                        <div class="pt-2 space-y-2.5">
+                            <span class="block font-bold tracking-wider text-[10px] uppercase text-stone-400">Included Deliverables:</span>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-xs">
+                                <div class="flex gap-2"><span class="text-stone-400">✨</span> <span><strong class="text-stone-800">The Signature Blueprint:</strong> Comprehensive multi-page master document matching Tiers 1 and 2 for the entire duration.</span></div>
+                                <div class="flex gap-2"><span class="text-stone-400">🏨</span> <span><strong class="text-stone-800">Accommodation Shortlists:</strong> 2–3 hand-selected, verified independent boutique lodging matches with link anchors.</span></div>
+                                <div class="flex gap-2"><span class="text-stone-400">🔄</span> <span><strong class="text-stone-800">Two Revision Rounds:</strong> Collaborative aesthetic adjustments to tweak pace and environmental balance.</span></div>
+                                <div class="flex gap-2"><span class="text-[#8C7A6B]">🎁</span> <span><strong class="text-stone-800">Complimentary Travel Print:</strong> Choose any signature 8x10 watercolor landscape print — shipped straight to your wall.</span></div>
                             </div>
                         </div>
                     </div>
-                    <a href="#discover" class="block text-center mt-8 bg-[#4E5142] hover:bg-[#3D4035] text-white font-semibold text-xs py-3 rounded-lg transition shadow-xs">
-                        Retain Architect ➔
-                    </a>
                 </div>
             </div>
         </section>
@@ -292,51 +267,6 @@
 
         <hr class="border-stone-200/60 my-16">
 
-        <!-- Section 3.7: How It Works Section -->
-        <section class="mb-20">
-            <div class="text-center mb-12">
-                <span class="text-xs tracking-[0.2em] text-[#8C7A6B] uppercase font-bold">The Process</span>
-                <h2 class="text-3xl md:text-4xl font-medium text-[#3D4035] mt-2">Three Steps to Spatial Certainty</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto items-stretch">
-                <!-- Step 1 -->
-                <div class="relative bg-white border border-stone-200/60 rounded-2xl p-6 shadow-sm flex flex-col justify-start">
-                    <div class="text-4xl font-semibold font-serif text-[#8C7A6B]/15 absolute top-3 right-5 select-none">01</div>
-                    <h3 class="font-bold text-xs uppercase tracking-wider text-[#3D4035] mb-3 pr-10 border-b border-stone-100 pb-2">
-                        Submit Your Parameters
-                    </h3>
-                    <p class="text-xs text-stone-600 leading-relaxed">
-                        Fill out our comprehensive, 3-minute digital Discovery Questionnaire. Tell us where you're heading, your culinary adventurousness, and what’s keeping you up at night.
-                    </p>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="relative bg-white border border-stone-200/60 rounded-2xl p-6 shadow-sm flex flex-col justify-start">
-                    <div class="text-4xl font-semibold font-serif text-[#8C7A6B]/15 absolute top-3 right-5 select-none">02</div>
-                    <h3 class="font-bold text-xs uppercase tracking-wider text-[#3D4035] mb-3 pr-10 border-b border-stone-100 pb-2">
-                        Secure Your Retainer
-                    </h3>
-                    <p class="text-xs text-stone-600 leading-relaxed">
-                        Receive a digital invoice for your selected tier. Once payment is processed, we immediately deploy our firsthand international expertise to build your asset.
-                    </p>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="relative bg-white border border-stone-200/60 rounded-2xl p-6 shadow-sm flex flex-col justify-start">
-                    <div class="text-4xl font-semibold font-serif text-[#8C7A6B]/15 absolute top-3 right-5 select-none">03</div>
-                    <h3 class="font-bold text-xs uppercase tracking-wider text-[#3D4035] mb-3 pr-10 border-b border-stone-100 pb-2">
-                        Receive Your Masterpiece
-                    </h3>
-                    <p class="text-xs text-stone-600 leading-relaxed">
-                        Within 7 to 10 business days, a beautifully formatted, highly scannable, custom digital blueprint arrives in your inbox, ready to turn your travel anxiety into absolute confidence.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <hr class="border-stone-200/60 my-16">
-
         <!-- Section 4: Interactive Strategic FAQs -->
         <section class="mb-20 max-w-2xl mx-auto">
             <div class="text-center mb-12">
@@ -345,72 +275,88 @@
             </div>
 
             <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <!-- Strategy: Overcome the pricing objection by shifting the focus from booking to curation. -->
+                <!-- NEW FAQ Item 1 (Reimagined from 'How It Works') -->
                 <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
                     <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(1)">
-                        <span>Why should I pay a planning retainer when I can book travel myself or use a traditional agent for free?</span>
+                        <span>How does this process work from start to finish?</span>
                         <svg id="icon-1" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
-                    <div id="faq-1" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30">
-                        Traditional travel agents are primarily compensated through backend commissions from major suppliers, meaning their recommendations can sometimes lean toward large resort chains or bulk cruises that offer standard payouts. At The Conscious Compass, we operate entirely on an independent, fee-for-service model. You are paying for an elite level of custom curation, deep international landscape research, and surgical logistics management. Because we are not beholden to commission structures, our loyalty belongs 100% to you. We filter out the noise to hand-select independent boutique stays, hyper-local eco-lodges, and off-the-beaten-path experiences that match your exact comfort level, physical agility, and dietary needs. We save you dozens of hours of frustrating guesswork, giving you complete spatial confidence before you fly.
+                    <div id="faq-1" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30 space-y-3">
+                        <p>Our collaborative pipeline relies on three distinct steps to deliver absolute layout certainty:</p>
+                        <p><strong>1. Submit Your Parameters:</strong> Fill out our comprehensive, 3-minute digital Discovery Questionnaire below. Tell us where you are heading, your culinary adventurousness, and the specific variables that are keeping you up at night.</p>
+                        <p><strong>2. Secure Your Retainer:</strong> Next, you will receive a digital invoice corresponding to your selected tier. Once processing settles, we immediately deploy our firsthand international research network to engineer your blueprint layout asset.</p>
+                        <p><strong>3. Receive Your Masterpiece:</strong> Within 7 to 10 business days, a beautifully formatted, highly scannable, custom digital document lands securely in your inbox, engineered to shift complex planning friction into unwavering global confidence.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <!-- Strategy: Clarify your business operations so clients know exactly what is expected of them. -->
+                <!-- Strategy: Overcome the pricing objection by shifting the focus from booking to curation. -->
                 <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
                     <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(2)">
-                        <span>Since you are a design-only planner, how do my hotels and excursions actually get booked?</span>
+                        <span>Why should I pay a planning retainer when I can book travel myself or use a traditional agent for free?</span>
                         <svg id="icon-2" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div id="faq-2" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30">
-                        We design the blueprint; you lock in the reservations. Once your final custom itinerary or research dossier is completed, you will receive a beautifully formatted, comprehensive digital document. For all recommended accommodations, trains, private transfers, and curated excursions, we provide direct, vetted reservation links. All you have to do is click and input your payment details. This transparent method ensures that you maintain absolute control over your loyalty points, personal credit card data, and cancellation policies, with zero hidden markups or third-party booking fees.
+                        Traditional travel agents are primarily compensated through backend commissions from major suppliers, meaning their recommendations can sometimes lean toward large resort chains or bulk cruises that offer standard payouts. At The Conscious Compass, we operate entirely on an independent, fee-for-service model. You are paying for an elite level of custom curation, deep international landscape research, and surgical logistics management. Because we are not beholden to commission structures, our loyalty belongs 100% to you. We filter out the noise to hand-select independent boutique stays, hyper-local eco-lodges, and off-the-beaten-path experiences that match your exact comfort level, physical agility, and dietary needs. We save you dozens of hours of frustrating guesswork, giving you complete spatial confidence before you fly.
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <!-- Strategy: Establish clear legal and professional boundaries regarding liability. -->
+                <!-- Strategy: Clarify your business operations so clients know exactly what is expected of them. -->
                 <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
                     <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(3)">
-                        <span>What happens if my flight gets delayed or a hotel cancellation happens while I am on my trip?</span>
+                        <span>Since you are a design-only planner, how do my hotels and excursions actually get booked?</span>
                         <svg id="icon-3" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div id="faq-3" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30">
-                        Because we are a design, curation, and intelligence service rather than a transactional booking agency, the legal contracts for your reservations exist directly between you and the vendors you choose to book (the airlines, boutique hotels, or local tour operators). While we do not provide 24/7 on-trip crisis management or re-booking services, your custom blueprint is intentionally designed to mitigate these risks. We build robust time tolerances into your transit networks, provide clear alternative routes, and supply emergency local contact protocols right inside your dossier so you can smoothly navigate unexpected travel anomalies with complete independence. We highly recommend securing comprehensive travel insurance for every international journey.
+                        We design the blueprint; you lock in the reservations. Once your final custom itinerary or research dossier is completed, you will receive a beautifully formatted, comprehensive digital document. For all recommended accommodations, trains, private transfers, and curated excursions, we provide direct, vetted reservation links. All you have to do is click and input your payment details. This transparent method ensures that you maintain absolute control over your loyalty points, personal credit card data, and cancellation policies, with zero hidden markups or third-party booking fees.
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <!-- Strategy: Turn a massive pain point for high-end travelers into a premium asset. -->
+                <!-- Strategy: Establish clear legal and professional boundaries regarding liability. -->
                 <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
                     <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(4)">
-                        <span>I have severe food allergies / strict dietary boundaries. Can your curated recommendations accommodate me safely?</span>
+                        <span>What happens if my flight gets delayed or a hotel cancellation happens while I am on my trip?</span>
                         <svg id="icon-4" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div id="faq-4" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30">
-                        Absolutely. In fact, this is one of our primary specialties. Cross-referencing safe dining in unfamiliar countries can be incredibly stressful. When building your custom itinerary or research dossier, we don't just pull arbitrary restaurant reviews. We deeply analyze your dietary profile—whether you are strictly vegan, managing celiac disease, or navigating severe food allergies. We curate dedicated dining blueprints and, for our Tier 3 flagship clients, we explicitly verify the physical kitchen frameworks and kitchenette capabilities of our recommended lodging to ensure your safety and comfort are fully integrated into the architecture of your trip.
+                        Because we are a design, curation, and intelligence service rather than a transactional booking agency, the legal contracts for your reservations exist directly between you and the vendors you choose to book (the airlines, boutique hotels, or local tour operators). While we do not provide 24/7 on-trip crisis management or re-booking services, your custom blueprint is intentionally designed to mitigate these risks. We build robust time tolerances into your transit networks, provide clear alternative routes, and supply emergency local contact protocols right inside your dossier so you can smoothly navigate unexpected travel anomalies with complete independence. We highly recommend securing comprehensive travel insurance for every international journey.
                     </div>
                 </div>
 
                 <!-- FAQ Item 5 -->
-                <!-- Strategy: Show that you are a collaborative partner while keeping "scope creep" tightly controlled. -->
+                <!-- Strategy: Turn a massive pain point for high-end travelers into a premium asset. -->
                 <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
                     <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(5)">
-                        <span>Can I request revisions if the initial blueprint pace doesn't feel quite right?</span>
+                        <span>I have severe food allergies / strict dietary boundaries. Can your curated recommendations accommodate me safely?</span>
                         <svg id="icon-5" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div id="faq-5" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30">
+                        Absolutely. In fact, this is one of our primary specialties. Cross-referencing safe dining in unfamiliar countries can be incredibly stressful. When building your custom itinerary or research dossier, we don't just pull arbitrary restaurant reviews. We deeply analyze your dietary profile—whether you are strictly vegan, managing celiac disease, or navigating severe food allergies. We curate dedicated dining blueprints and, for our Tier 3 flagship clients, we explicitly verify the physical kitchen frameworks and kitchenette capabilities of our recommended lodging to ensure your safety and comfort are fully integrated into the architecture of your trip.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <!-- Strategy: Show that you are a collaborative partner while keeping "scope creep" tightly controlled. -->
+                <div class="border border-stone-200/60 rounded-xl bg-white overflow-hidden">
+                    <button class="w-full text-left p-5 font-semibold text-sm md:text-base text-[#3D4035] flex justify-between items-center focus:outline-none" onclick="toggleFAQ(6)">
+                        <span>Can I request revisions if the initial blueprint pace doesn't feel quite right?</span>
+                        <svg id="icon-6" class="w-4 h-4 text-stone-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-6" class="hidden px-5 pb-5 text-xs md:text-sm text-stone-600 leading-relaxed border-t border-stone-50 pt-3 bg-stone-50/30">
                         Yes, collaboration is a vital part of the artistic design process. For our Tier 3 Custom Trip Retainer, your investment includes up to two complete rounds of revisions. After receiving your initial draft blueprint, we will review the pacing, accommodation styles, and daily flow together, fine-tuning the elements until it perfectly mirrors your ideal travel energy. For our Tier 1 and Tier 2 services, our comprehensive intake form is designed to capture your exact parameters upfront so your finalized dossier hits the mark right out of the gate.
                     </div>
                 </div>
@@ -486,7 +432,7 @@
                         <input type="text" name="family_child_ages" placeholder="e.g., 4, 8" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:border-[#8C7A6B] focus:ring-1 focus:ring-[#8C7A6B] outline-none bg-white transition">
                     </div>
 
-                    <!-- Q3: Service Selection Framework (Now includes clean selection markers for Art Only) -->
+                    <!-- Q3: Service Selection Framework -->
                     <div class="space-y-2 pt-2">
                         <label class="block text-[11px] font-semibold tracking-wider text-stone-500 uppercase">Which portfolio segment are we securing?</label>
                         <div class="space-y-2.5 pt-1">
@@ -518,7 +464,6 @@
                 </div>
 
                 <!-- TRAVEL INTERFACE SECTION: DESTINATION, ENERGY, & CULINARY STYLE -->
-                <!-- Hides dynamically when an Art-Only field is checked above to clear clutter -->
                 <div id="travel-core-fields" class="space-y-5 border-b border-stone-200/50 pb-8">
                     <h4 class="font-serif font-semibold text-lg text-[#3D4035] flex items-center gap-2">
                         <span class="text-xs font-sans font-bold bg-[#8C7A6B]/15 text-[#8C7A6B] w-5 h-5 rounded-full inline-flex items-center justify-center">2</span> 
@@ -565,7 +510,7 @@
                     </div>
 
                     <!-- Conditional Dynamic Field: Q6 Agility (Triggered by 'Active Exploration') -->
-                    <div id="agility-fields-wrapper" class="hidden bg-stone-50/80 border border-stone-200/60 rounded-2xl p-4 md:p-5 transition-all duration-300">
+                    <div id="agility-fields-wrapper" class="hidden bg-stone-50/80 border border-stone-200/60 rounded-2xl p-4 md:p-5 transition-all duration-300 transform">
                         <label class="block text-[11px] font-semibold tracking-wider text-[#8C7A6B] uppercase mb-2">Q6: Physical Agility & Terrain Comfort</label>
                         <div class="space-y-2 text-xs">
                             <label class="flex items-start gap-3 p-2.5 bg-white border border-stone-100 rounded-xl cursor-pointer">
@@ -746,7 +691,7 @@
                         </div>
                     </div>
 
-                    <!-- NEW DYNAMIC CONTAINER: FINE ART ONLY SPECS (Bypasses travel questions completely) -->
+                    <!-- NEW DYNAMIC CONTAINER: FINE ART ONLY SPECS -->
                     <div id="art-only-fields" class="hidden space-y-5 border-b border-stone-200/50 pb-8 dynamic-tier-section">
                         <h4 class="font-serif font-semibold text-lg text-[#8C7A6B] flex items-center gap-2">
                             <span class="text-xs font-sans font-bold bg-[#8C7A6B]/15 text-[#8C7A6B] w-5 h-5 rounded-full inline-flex items-center justify-center">2</span> 
@@ -754,7 +699,6 @@
                         </h4>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <!-- Dropdown selection for print name or commission medium -->
                             <div>
                                 <label class="block text-[11px] font-semibold tracking-wider text-stone-500 uppercase mb-1">Select Asset Style / Type</label>
                                 <select name="art_product_medium" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:border-[#8C7A6B] focus:ring-1 focus:ring-[#8C7A6B] outline-none bg-white text-xs transition">
@@ -763,14 +707,12 @@
                                     <option value="standalone_print_8x10">Standalone Portfolio Landscape Print (Size 8x10 — $35.00)</option>
                                 </select>
                             </div>
-                            <!-- Target print or memory tracker input -->
                             <div>
                                 <label class="block text-[11px] font-semibold tracking-wider text-stone-500 uppercase mb-1">Target Print Title or Reference Scene</label>
-                                <input type="text" name="art_target_subject" placeholder="e.g., 'Misty Basin Canoe Sketch' or 'Custom Costa Rica Memory'" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:border-[#8C7A6B] focus:ring-1 focus:ring-[#8C7A6B] outline-none bg-white text-xs transition">
+                                <input type="text" name="art_target_subject" placeholder="e.g., 'Misty Basin Canoe Sketch' or 'Custom Landscape Memory'" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:border-[#8C7A6B] focus:ring-1 focus:ring-[#8C7A6B] outline-none bg-white text-xs transition">
                             </div>
                         </div>
 
-                        <!-- Core detailed box explicitly styled for art specifics -->
                         <div>
                             <label class="block text-[11px] font-semibold tracking-wider text-stone-500 uppercase mb-1">Visual Memory Summary or Custom Sketch Parameters</label>
                             <textarea name="art_creative_details" rows="4" placeholder="For Commissions: Summarize the environmental landscape, colors, or visual textures you want framed. (Reminder: I focus strictly on environment-first scenes; no portraits or facial details). For Prints: Add any shipping instructions..." class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-[#8C7A6B] focus:ring-1 focus:ring-[#8C7A6B] outline-none bg-stone-50/40 transition"></textarea>
@@ -782,18 +724,15 @@
                 <!-- SECTION 4: FINAL SUBMISSION & BOUNDARIES -->
                 <div class="space-y-5 pt-2">
                     <h4 class="font-serif font-semibold text-lg text-[#3D4035] flex items-center gap-2">
-                        <!-- Dynamic indicator managed by script for cleaner scannability -->
                         <span id="final-section-num" class="text-xs font-sans font-bold bg-[#8C7A6B]/15 text-[#8C7A6B] w-5 h-5 rounded-full inline-flex items-center justify-center">4</span> 
                         Final Submission & Framework Execution
                     </h4>
 
-                    <!-- Q20: Final Thoughts -->
                     <div>
                         <label class="block text-[11px] font-semibold tracking-wider text-stone-500 uppercase mb-1">Is there anything else close to your heart that will help customize this asset into an absolute masterpiece?</label>
                         <textarea name="client_final_thoughts" rows="4" placeholder="Share specific vision statements, unique boundaries, or formatting alignment tracking expectations..." class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-[#8C7A6B] focus:ring-1 focus:ring-[#8C7A6B] outline-none bg-stone-50/40 transition"></textarea>
                     </div>
 
-                    <!-- Q21: Mandatory Retainer Acknowledgment -->
                     <div class="p-4 bg-[#8C7A6B]/5 border border-[#8C7A6B]/20 rounded-2xl">
                         <label class="flex items-start gap-3.5 cursor-pointer select-none text-xs leading-relaxed text-stone-600">
                             <input type="checkbox" name="retainer_acknowledgment_check" required class="mt-1 rounded accent-[#8C7A6B] w-4 h-4">
@@ -894,8 +833,6 @@
 
         // --- FORM LIVE BRANCHING LOGIC ENGINE ---
         document.addEventListener('DOMContentLoaded', function() {
-            
-            // 1. Family Radios Visibility Handler
             const partyRadios = document.querySelectorAll('input[name="party_dynamics"]');
             const familyAgesWrapper = document.getElementById('family-ages-wrapper');
             
@@ -909,7 +846,6 @@
                 });
             });
 
-            // 2. Active Exploration Selector Handler
             const activeEnergyCheckbox = document.getElementById('energy-active-trigger');
             const agilityFieldsWrapper = document.getElementById('agility-fields-wrapper');
             
@@ -921,7 +857,6 @@
                 }
             });
 
-            // 3. Service Framework Radios / Dynamic Section & Macro-Clutter Switcher
             const frameworkRadios = document.querySelectorAll('.framework-type-trigger');
             const travelCoreSection = document.getElementById('travel-core-fields');
             const artOnlySection = document.getElementById('art-only-fields');
@@ -933,7 +868,6 @@
 
             frameworkRadios.forEach(radio => {
                 radio.addEventListener('change', function() {
-                    // Reset all leaf containers to hidden state
                     tier1Div.classList.add('hidden');
                     tier2Div.classList.add('hidden');
                     tier3Div.classList.add('hidden');
@@ -943,20 +877,16 @@
                     const selection = this.value;
 
                     if (selection === 'art_commission' || selection === 'art_print') {
-                        // ART PACKAGES ONLY ROUTE: Completely strips travel clutter
                         artOnlySection.classList.remove('hidden');
-                        finalSectionNum.innerText = "3"; // Dynamic section title sequence numbering
+                        finalSectionNum.innerText = "3";
                     } else {
-                        // TRAVEL RETREAT RETROFIT ROUTE
                         travelCoreSection.classList.remove('hidden');
                         finalSectionNum.innerText = "4";
                         
-                        // Selectively re-index travel deep dive targets
                         if (selection === 'tier_1') tier1Div.classList.remove('hidden');
                         if (selection === 'tier_2') tier2Div.classList.remove('hidden');
                         if (selection === 'tier_3') tier3Div.classList.remove('hidden');
                         
-                        // Synchronize child parameters state checks
                         if (activeEnergyCheckbox.checked) {
                             agilityFieldsWrapper.classList.remove('hidden');
                         }
@@ -985,7 +915,6 @@
             const formData = new FormData(form);
             const object = Object.fromEntries(formData);
             
-            // Parse array indicators cleanly
             const energyCheckboxes = document.querySelectorAll('input[name="trip_energy[]"]:checked');
             const energyValues = Array.from(energyCheckboxes).map(cb => cb.value);
             object['trip_energy_focus'] = energyValues.join(', ');
