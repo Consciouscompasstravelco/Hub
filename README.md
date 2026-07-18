@@ -5,7 +5,7 @@
     <title>The Conscious Compass Travel Co.</title>
     <!-- Tailwind CSS for modern, responsive layout styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -184,13 +184,13 @@
                         
                         <!-- Right Column: Portrait and Stationery Logo Stacking Grid -->
                         <div class="md:w-2/5 w-full flex flex-col gap-5 shrink-0">
-                            <!-- Portrait Frame -->
+                            <!-- Portrait Frame (Expects local or fallback JPG) -->
                             <div class="rounded-2xl overflow-hidden border border-stone-200/60 shadow-sm aspect-square bg-stone-100">
                                 <img id="about-portrait" src="IMG_0608.jpeg" alt="Travel Architect Portrait" class="w-full h-full object-cover transition-opacity duration-500 opacity-0" onload="this.classList.remove('opacity-0')">
                             </div>
-                            <!-- Logo Frame -->
+                            <!-- Logo Frame (Safely handles URL encoded pathing) -->
                             <div class="rounded-2xl overflow-hidden border border-stone-200/60 shadow-sm bg-white p-2">
-                                <img id="about-logo" src="The conscious compass travel co.Culture background logo.jpg" alt="The Conscious Compass Logo" class="w-full h-auto rounded-xl transition-opacity duration-500 opacity-0" onload="this.classList.remove('opacity-0')">
+                                <img id="about-logo" src="The%20conscious%20compass%20travel%20co.Culture%20background%20logo.jpg" alt="The Conscious Compass Logo" class="w-full h-auto rounded-xl transition-opacity duration-500 opacity-0" onload="this.classList.remove('opacity-0')">
                             </div>
 
                             <script>
@@ -726,7 +726,7 @@
                             </label>
                             <label class="flex items-start gap-3 p-2.5 bg-white border border-stone-100 rounded-xl cursor-pointer">
                                 <input type="radio" name="physical_agility" value="summit" class="accent-[#8C7A6B] mt-0.5">
-                                <span><strong class="text-stone-800 block">The Summit Seekers (Advanced):</strong> Bring on steep vertical climbs, rocky scrambles, higher altitudes, or technical water crossings (6+ miles).</span>
+                                <span><strong class="text-stone-800 block">The Summit Seekers (Advanced):</strong> Bring on steep vertical profiles, scrambles, higher altitudes, or technical water crossings (6+ miles).</span>
                             </label>
                             <label class="flex items-start gap-3 p-2.5 bg-white border border-stone-100 rounded-xl cursor-pointer">
                                 <input type="radio" name="physical_agility" value="accessible" class="accent-[#8C7A6B] mt-0.5">
@@ -1122,7 +1122,7 @@
             });
         });
 
-        // --- INTERACTIVE hummINGBIRD LOGIC ENGINES ---
+        // --- INTERACTIVE HUMMINGBIRD LOGIC ENGINES ---
         document.addEventListener('DOMContentLoaded', function() {
             const bird = document.getElementById('hummingbird');
             let lastScrollY = window.scrollY;
