@@ -1094,7 +1094,7 @@
                 const finalY = bobY + offsetY;
 
                 // Apply matrices directly to layout structures
-                container.style.transform = `translate3d(${finalX}px, ${finalY}px, 0) rotate(${currentRotation}px)`;
+                container.style.transform = `translate3d(${finalX}px, ${finalY}px, 0) rotate(${currentRotation}deg)`;
 
                 // Wing flapping cycle
                 const flap = Math.sin(Date.now() * (1 / (wingSpeed * 1000)));
