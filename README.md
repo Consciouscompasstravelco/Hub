@@ -125,7 +125,7 @@
                                 My design philosophy is built from firsthand, real-world experience navigating diverse international terrains—from the dense canopy systems of Central America to complex, transit-heavy urban landscapes. Having mapped out and executed deep-dive family travels and eco-conscious expeditions across the globe, I launched <strong class="text-[#3D4035] font-semibold">The Conscious Compass Travel Co.</strong> to provide travelers with an entirely new standard of travel intelligence.
                             </p>
                             <p>
-                                I specialize in translating complex international logistics, regional transit systems, and intricate cultural topographies into a singular, beautifully curated blueprint. My focus is entirely on slow, sustainable, and eco-conscious travel—crafting journeys that honor the ecosystems we visit while protecting the absolute safety, structural comfort, and culinary needs of your travel party. I don't just tell you where to go; I give you the complete spatial awareness, transit protocols, and expertly curated neighborhood insights you need to experience a destination with complete, unwavering confidence.
+                                My specialty is translating complex international logistics, regional transit systems, and intricate cultural topographies into a singular, beautifully curated blueprint. My focus is entirely on slow, sustainable, and eco-conscious travel—crafting journeys that honor the ecosystems we visit while protecting the absolute safety, structural comfort, and culinary needs of your travel party. I don't just tell you where to go; I give you the complete spatial awareness, transit protocols, and expertly curated neighborhood insights you need to experience a destination with complete, unwavering confidence.
                             </p>
                             <p class="font-medium text-[#4E5142] italic pt-3 text-sm">
                                 Let’s step away from the endless planning loops and curate your next masterpiece.
@@ -134,26 +134,14 @@
                         
                         <!-- Right Column: Portrait and Stationery Logo Stacking Grid -->
                         <div class="md:w-2/5 w-full flex flex-col gap-5 shrink-0">
-                            <!-- Portrait Frame -->
+                            <!-- Portrait Frame (Looking directly for Portrait.jpg at Line 133) -->
                             <div class="rounded-2xl overflow-hidden border border-stone-200/60 shadow-sm aspect-square bg-stone-100">
                                 <img id="about-portrait" src="Portrait.jpg" alt="Travel Architect Portrait" class="w-full h-full object-cover transition-opacity duration-500 opacity-0" onload="this.classList.remove('opacity-0')">
                             </div>
-                            <!-- Logo Frame (Clean and direct reference to Logo.jpg) -->
+                            <!-- Logo Frame (Looking directly for Logo.jpg at Line 137) -->
                             <div class="rounded-2xl overflow-hidden border border-stone-200/60 shadow-sm bg-white p-2">
                                 <img id="about-logo" src="Logo.jpg" alt="The Conscious Compass Logo" class="w-full h-auto rounded-xl transition-opacity duration-500 opacity-0" onload="this.classList.remove('opacity-0')">
                             </div>
-
-                            <script>
-                                // Fallback scripts to keep the preview beautiful before you upload your local assets
-                                document.getElementById('about-portrait').onerror = function() {
-                                    this.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
-                                    this.classList.remove('opacity-0');
-                                };
-                                document.getElementById('about-logo').onerror = function() {
-                                    this.src = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80";
-                                    this.classList.remove('opacity-0');
-                                };
-                            </script>
                         </div>
                     </div>
                 </div>
@@ -298,7 +286,7 @@
                 <div class="bg-white p-3 rounded-2xl shadow-sm border border-stone-200/40 flex flex-col justify-between">
                     <div>
                         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-stone-100">
-                            <img src="landscape.jpg" alt="Misty Canoe Watercolor Print" class="w-full h-full object-cover">
+                            <img src="landscape.jpg" alt="Misty Basin Canoe Sketch" class="w-full h-full object-cover">
                         </div>
                         <div class="mt-4 px-2">
                             <span class="text-[10px] font-bold tracking-wider text-[#8C7A6B] uppercase">Fine Art Editions</span>
@@ -356,7 +344,7 @@
 
         <hr class="border-stone-200/60 my-16">
 
-        <!-- Section 4: Interactive Strategic FAQs (Including the newly integrated "How it Works" question) -->
+        <!-- Section 4: Interactive Strategic FAQs -->
         <section class="mb-20 max-w-2xl mx-auto">
             <div class="text-center mb-12">
                 <span class="text-xs tracking-[0.2em] text-[#8C7A6B] uppercase font-bold">Clarifying the Path</span>
@@ -1164,6 +1152,56 @@
                 submitBtn.innerHTML = "Submit Discovery Profile";
             });
         });
+
+        // Safe Fallback Loader Core Engine - Self-Healing Image Pathways
+        const portraitImg = document.getElementById('about-portrait');
+        const portraitFallbacks = [
+            "Portrait.jpg?v=" + Date.now(), // Retry original with fresh timestamp cache-buster
+            "portrait.jpg?v=" + Date.now(), 
+            "Portrait.JPG?v=" + Date.now(), 
+            "portrait.JPG?v=" + Date.now(), 
+            "Portrait.jpeg?v=" + Date.now(), 
+            "portrait.jpeg?v=" + Date.now(), 
+            "Portrait.jpg.jpg", // Solve Windows hidden double extension issue
+            "portrait.jpg.jpg",
+            "Portrait.jpg.png",
+            "IMG_0608.jpeg"
+        ];
+        let portIdx = 0;
+        portraitImg.onerror = function() {
+            if (portIdx < portraitFallbacks.length) {
+                this.src = portraitFallbacks[portIdx++];
+            } else {
+                this.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
+                this.classList.remove('opacity-0');
+            }
+        };
+
+        const logoImg = document.getElementById('about-logo');
+        const logoFallbacks = [
+            "Logo.jpg?v=" + Date.now(), // Force cache bypass on immediate load failure
+            "logo.jpg?v=" + Date.now(), 
+            "Logo.JPG?v=" + Date.now(), 
+            "logo.JPG?v=" + Date.now(), 
+            "Logo.png?v=" + Date.now(), 
+            "logo.png?v=" + Date.now(), 
+            "Logo.jpeg?v=" + Date.now(), 
+            "logo.jpeg?v=" + Date.now(),
+            "Logo.jpg.jpg", // Solve Windows hidden double extension issue (.jpg.jpg)
+            "Logo.jpg.png", // Solve Windows hidden double extension issue (.jpg.png)
+            "logo.jpg.jpg",
+            "logo.jpg.png",
+            "The conscious compass travel co.Culture background logo.jpg"
+        ];
+        let logoIdx = 0;
+        logoImg.onerror = function() {
+            if (logoIdx < logoFallbacks.length) {
+                this.src = logoFallbacks[logoIdx++];
+            } else {
+                this.src = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80";
+                this.classList.remove('opacity-0');
+            }
+        };
     </script>
 </body>
 </html>
