@@ -56,7 +56,7 @@
 
             <!-- Underwing (Anatomical Flutter Action Layer) -->
             <g id="underwing" style="transform-origin: 88px 50px;">
-                <path d="M 88 50 C 100 20 115 -10 130 -15 C 120 10 105 30 88 50 Z" fill="url(#wing-grad)" />
+                <path d="M 88 50 C 100 20 115 -10 130 -15 C 120 10 105 30 88 50 Z" fill="url(--wing-grad)" />
             </g>
 
             <!-- Anatomical Body Contour (Sleek throat, swelling chest & slender belly) -->
@@ -132,13 +132,13 @@
                             </p>
                         </div>
                         
-                        <!-- Right Column: Portrait and Stationery Logo Stacking Grid (No images placed above text) -->
+                        <!-- Right Column: Portrait and Stationery Logo Stacking Grid -->
                         <div class="md:w-2/5 w-full flex flex-col gap-5 shrink-0">
-                            <!-- Portrait Frame (Expects local or fallback JPG) -->
+                            <!-- Portrait Frame -->
                             <div class="rounded-2xl overflow-hidden border border-stone-200/60 shadow-sm aspect-square bg-stone-100">
                                 <img id="about-portrait" src="Portrait.jpg" alt="Travel Architect Portrait" class="w-full h-full object-cover transition-opacity duration-500 opacity-0" onload="this.classList.remove('opacity-0')">
                             </div>
-                            <!-- Logo Frame (Safely handles URL encoded pathing) -->
+                            <!-- Logo Frame (Clean and direct reference to Logo.jpg) -->
                             <div class="rounded-2xl overflow-hidden border border-stone-200/60 shadow-sm bg-white p-2">
                                 <img id="about-logo" src="Logo.jpg" alt="The Conscious Compass Logo" class="w-full h-auto rounded-xl transition-opacity duration-500 opacity-0" onload="this.classList.remove('opacity-0')">
                             </div>
@@ -820,7 +820,7 @@
                         </div>
                     </div>
 
-                    <!-- NEW DYNAMIC CONTAINER: FINE ART ONLY SPECS (Bypasses travel parameter clusters seamlessly) -->
+                    <!-- NEW DYNAMIC CONTAINER: FINE ART ONLY SPECS -->
                     <div id="art-only-fields" class="hidden space-y-5 border-b border-stone-200/50 pb-8 dynamic-tier-section">
                         <h4 class="font-serif font-semibold text-lg text-[#8C7A6B] flex items-center gap-2">
                             <span class="text-xs font-sans font-bold bg-[#8C7A6B]/15 text-[#8C7A6B] w-5 h-5 rounded-full inline-flex items-center justify-center">2</span> 
